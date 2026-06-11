@@ -1,0 +1,21 @@
+loaded 50 primed prompts
+already have 0 valid responses
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 15 ok, 0 err, est $0.014
+  progress: 30 ok, 0 err, est $0.024
+  progress: 45 ok, 0 err, est $0.029
+  progress: 60 ok, 0 err, est $0.045
+  progress: 75 ok, 0 err, est $0.120
+  progress: 90 ok, 0 err, est $0.217
+  progress: 105 ok, 0 err, est $0.312
+  progress: 120 ok, 0 err, est $0.400
+  progress: 135 ok, 0 err, est $0.476
+  progress: 150 ok, 0 err, est $0.604
+  progress: 165 ok, 0 err, est $0.689
+  progress: 180 ok, 0 err, est $0.755
+  progress: 195 ok, 0 err, est $0.790
+  progress: 210 ok, 0 err, est $0.814
+  progress: 225 ok, 0 err, est $0.835
+  progress: 240 ok, 0 err, est $0.854
+
+DONE. 250 rows (250 ok). this session: est $0.860

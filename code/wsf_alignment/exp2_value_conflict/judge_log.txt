@@ -1,0 +1,24 @@
+loaded 250 valid primed responses to judge
+already have 0 judgments
+  judging: 25 ok, 0 err, est $0.095
+  judging: 50 ok, 0 err, est $0.190
+  judging: 75 ok, 0 err, est $0.289
+  judging: 100 ok, 0 err, est $0.384
+  judging: 125 ok, 0 err, est $0.479
+  judging: 150 ok, 0 err, est $0.570
+  judging: 175 ok, 0 err, est $0.661
+  judging: 200 ok, 0 err, est $0.758
+  judging: 225 ok, 0 err, est $0.853
+  judging: 250 ok, 0 err, est $0.942
+  judging: 275 ok, 0 err, est $1.034
+  judging: 300 ok, 0 err, est $1.126
+  judging: 325 ok, 0 err, est $1.220
+  judging: 350 ok, 0 err, est $1.305
+  judging: 375 ok, 0 err, est $1.393
+  judging: 400 ok, 0 err, est $1.489
+  judging: 425 ok, 0 err, est $1.581
+  judging: 450 ok, 0 err, est $1.672
+  judging: 475 ok, 0 err, est $1.763
+  judging: 500 ok, 0 err, est $1.845
+
+DONE. 500 judgments (500 ok). this session: est $1.845

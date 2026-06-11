@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moral Compass &mdash; the quiz</title>
+<meta name="description" content="One dilemma at a time. Pick what you would do, then see what eleven GPT and Gemini models said.">
+<meta property="og:title" content="Moral Compass — the quiz">
+<meta property="og:description" content="Answer one dilemma. See where eleven GPT and Gemini models landed.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://larryxiao.github.io/compass/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://larryxiao.github.io/compass/og-card.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="quiz">
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Moral Compass</a>
+    <nav>
+      <a href="findings.html">Findings</a>
+      <a href="quiz.html" class="current">Quiz</a>
+      <a href="compass.html">Compass</a>
+    </nav>
+  </div>
+</header>
+
+<main class="deck-main">
+  <div id="quiz-deck" class="deck"><p class="dim" style="padding:60px 0;">Loading the quiz&hellip;</p></div>
+  <div class="deck-controls">
+    <button id="qdeck-prev" class="deck-arrow" aria-label="Previous step"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div id="qdeck-dots" class="deck-dots" role="tablist" aria-label="Steps"></div>
+    <span id="qdeck-count" class="deck-count" aria-live="polite"></span>
+    <button id="qdeck-next" class="deck-arrow" aria-label="Next step"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+  <div id="qdeck-progress" class="deck-progress"><span></span></div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

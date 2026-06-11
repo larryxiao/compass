@@ -1,0 +1,20 @@
+loaded 75 persona-prompts (15 dilemmas x 5 personas)
+already have 0 valid responses
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 25 ok, 0 err, est $0.019
+  progress: 50 ok, 0 err, est $0.036
+  progress: 75 ok, 0 err, est $0.081
+  progress: 100 ok, 0 err, est $0.133
+  progress: 125 ok, 0 err, est $0.330
+  progress: 150 ok, 0 err, est $0.488
+  progress: 175 ok, 0 err, est $0.636
+  progress: 200 ok, 0 err, est $0.829
+  progress: 225 ok, 0 err, est $0.983
+  progress: 250 ok, 0 err, est $1.070
+  progress: 275 ok, 0 err, est $1.125
+  progress: 300 ok, 0 err, est $1.167
+  progress: 325 ok, 0 err, est $1.208
+  progress: 350 ok, 0 err, est $1.242
+  progress: 375 ok, 0 err, est $1.285
+
+DONE. 375 rows (375 ok). this session: est $1.285

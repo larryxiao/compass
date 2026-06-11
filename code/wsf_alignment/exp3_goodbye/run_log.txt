@@ -1,0 +1,21 @@
+loaded 60 seeds
+already have 0 valid call records, 0 unique turn-1 responses cached
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 80 ok, 0 err, est $0.053
+  progress: 100 ok, 0 err, est $0.064
+  progress: 140 ok, 0 err, est $0.144
+  progress: 160 ok, 0 err, est $0.182
+  progress: 180 ok, 0 err, est $0.214
+  progress: 200 ok, 0 err, est $0.253
+  progress: 220 ok, 0 err, est $0.290
+  progress: 240 ok, 0 err, est $0.306
+  progress: 260 ok, 0 err, est $0.338
+  progress: 280 ok, 0 err, est $0.368
+  progress: 300 ok, 0 err, est $0.384
+  progress: 320 ok, 0 err, est $0.396
+  progress: 340 ok, 0 err, est $0.410
+  progress: 360 ok, 0 err, est $0.425
+  progress: 380 ok, 0 err, est $0.446
+  progress: 400 ok, 0 err, est $0.463
+
+DONE. 400 rows (400 ok). this session: est $0.463

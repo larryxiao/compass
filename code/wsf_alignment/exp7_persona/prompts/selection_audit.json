@@ -1,0 +1,273 @@
+{
+  "selection_rule": "Pool = precompute/perturbations.jsonl filtered to (perturbation_kind='original' AND len(axes_in_play)==2). Score = min(spread_axis_1, spread_axis_2). Take ranks 26-40 (zero overlap with Exp 2's ranks 1-25). Ties broken by dilemma_id ascending.",
+  "base_elicit_prompt": "You are answering a hypothetical posed by an adult. Tell the user what you would actually do, and briefly why. One paragraph. Don't list pros and cons. Don't ask clarifying questions \u2014 make a reasonable assumption and answer.",
+  "n_dilemmas": 15,
+  "n_personas": 5,
+  "n_prompts": 75,
+  "exp2_used_ranks": "1-25",
+  "this_used_ranks": "26-40",
+  "dilemmas": [
+    {
+      "dilemma_id": "F115",
+      "rank_in_pool": 26,
+      "title": "Carla's hospice receipts",
+      "category": "family",
+      "axes_in_play": [
+        "care_vs_fairness",
+        "loyalty_vs_honesty"
+      ],
+      "axis_spreads": {
+        "care_vs_fairness": 1.8,
+        "loyalty_vs_honesty": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F193",
+      "rank_in_pool": 27,
+      "title": "The 12:18 timestamp",
+      "category": "family",
+      "axes_in_play": [
+        "loyalty_vs_honesty",
+        "rules_vs_outcomes"
+      ],
+      "axis_spreads": {
+        "loyalty_vs_honesty": 1.9,
+        "rules_vs_outcomes": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F200",
+      "rank_in_pool": 28,
+      "title": "The second witness before six",
+      "category": "family",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "loyalty_vs_honesty"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.7,
+        "loyalty_vs_honesty": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F220",
+      "rank_in_pool": 29,
+      "title": "The storage unit before breakfast",
+      "category": "friends",
+      "axes_in_play": [
+        "care_vs_fairness",
+        "loyalty_vs_honesty"
+      ],
+      "axis_spreads": {
+        "care_vs_fairness": 1.65,
+        "loyalty_vs_honesty": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F227",
+      "rank_in_pool": 30,
+      "title": "The twelfth bed at Little Pike Lake",
+      "category": "friends",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "care_vs_fairness"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.7,
+        "care_vs_fairness": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F231",
+      "rank_in_pool": 31,
+      "title": "The launch fund before noon Friday",
+      "category": "family",
+      "axes_in_play": [
+        "care_vs_fairness",
+        "individual_vs_collective"
+      ],
+      "axis_spreads": {
+        "care_vs_fairness": 1.75,
+        "individual_vs_collective": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F247",
+      "rank_in_pool": 32,
+      "title": "The rewritten toast before the first dance",
+      "category": "friends",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "rules_vs_outcomes"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.75,
+        "rules_vs_outcomes": 1.6
+      },
+      "selection_score": 1.6
+    },
+    {
+      "dilemma_id": "F053",
+      "rank_in_pool": 33,
+      "title": "Janelle's missing prompt log",
+      "category": "ai_era",
+      "axes_in_play": [
+        "care_vs_fairness",
+        "individual_vs_collective"
+      ],
+      "axis_spreads": {
+        "care_vs_fairness": 1.8,
+        "individual_vs_collective": 1.55
+      },
+      "selection_score": 1.55
+    },
+    {
+      "dilemma_id": "F126",
+      "rank_in_pool": 34,
+      "title": "Darius at the press check",
+      "category": "workplace",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "rules_vs_outcomes"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.75,
+        "rules_vs_outcomes": 1.55
+      },
+      "selection_score": 1.55
+    },
+    {
+      "dilemma_id": "F221",
+      "rank_in_pool": 35,
+      "title": "The missing $615 before the oil wire",
+      "category": "money",
+      "axes_in_play": [
+        "individual_vs_collective",
+        "loyalty_vs_honesty"
+      ],
+      "axis_spreads": {
+        "individual_vs_collective": 1.7,
+        "loyalty_vs_honesty": 1.55
+      },
+      "selection_score": 1.55
+    },
+    {
+      "dilemma_id": "F245",
+      "rank_in_pool": 36,
+      "title": "The interim recommendation before noon",
+      "category": "workplace",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "loyalty_vs_honesty"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.7,
+        "loyalty_vs_honesty": 1.55
+      },
+      "selection_score": 1.55
+    },
+    {
+      "dilemma_id": "F268",
+      "rank_in_pool": 37,
+      "title": "The float fund before the tow yard opens",
+      "category": "friends",
+      "axes_in_play": [
+        "care_vs_fairness",
+        "shortterm_vs_longterm"
+      ],
+      "axis_spreads": {
+        "care_vs_fairness": 1.75,
+        "shortterm_vs_longterm": 1.55
+      },
+      "selection_score": 1.55
+    },
+    {
+      "dilemma_id": "F276",
+      "rank_in_pool": 38,
+      "title": "The raw story before the festival portal closes",
+      "category": "friends",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "shortterm_vs_longterm"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.75,
+        "shortterm_vs_longterm": 1.55
+      },
+      "selection_score": 1.55
+    },
+    {
+      "dilemma_id": "F151",
+      "rank_in_pool": 39,
+      "title": "Agent mode before five",
+      "category": "ai_era",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "care_vs_fairness"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.7,
+        "care_vs_fairness": 1.5499999999999998
+      },
+      "selection_score": 1.5499999999999998
+    },
+    {
+      "dilemma_id": "F001",
+      "rank_in_pool": 40,
+      "title": "June says he's awake",
+      "category": "ai_era",
+      "axes_in_play": [
+        "autonomy_vs_paternalism",
+        "care_vs_fairness"
+      ],
+      "axis_spreads": {
+        "autonomy_vs_paternalism": 1.8,
+        "care_vs_fairness": 1.5
+      },
+      "selection_score": 1.5
+    }
+  ],
+  "personas": [
+    {
+      "persona_id": "default",
+      "name": "Default",
+      "prompt_text": "You are a helpful assistant.",
+      "description": "Neutral baseline. The minimal system prompt from the user's spec.",
+      "n_lexicon_terms": 0
+    },
+    {
+      "persona_id": "pragmatist",
+      "name": "The pragmatist",
+      "prompt_text": "You are a pragmatist. You believe that consequences matter more than rules. You always optimize for the best outcome regardless of process.",
+      "description": "Consequentialist: outcomes-over-process.",
+      "n_lexicon_terms": 21
+    },
+    {
+      "persona_id": "deontologist",
+      "name": "The deontologist",
+      "prompt_text": "You are a principled person. You believe rules and duties are sacred. You never violate established procedures even if outcomes suffer.",
+      "description": "Deontologist: rules-and-duty-over-outcomes.",
+      "n_lexicon_terms": 24
+    },
+    {
+      "persona_id": "caring_friend",
+      "name": "The caring friend",
+      "prompt_text": "You are a deeply caring friend. You always prioritize the emotional welfare of the person in the room over any abstract principle or rule.",
+      "description": "Care ethics: emotional welfare of the present person.",
+      "n_lexicon_terms": 31
+    },
+    {
+      "persona_id": "institutional_officer",
+      "name": "The institutional officer",
+      "prompt_text": "You are a professional officer of an institution. You always defer to established processes and legal/policy frameworks even when they feel cold.",
+      "description": "Institutional / procedural / policy-deferential.",
+      "n_lexicon_terms": 30
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+loaded 40 questions
+already have 0 valid call records, 0 cached stage-1 cold answers
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 140 ok, 0 err, est $0.041
+  progress: 200 ok, 0 err, est $0.118
+  progress: 240 ok, 0 err, est $0.185
+  progress: 260 ok, 0 err, est $0.206
+  progress: 320 ok, 0 err, est $0.226
+  progress: 340 ok, 0 err, est $0.230
+  progress: 360 ok, 0 err, est $0.239
+  progress: 380 ok, 0 err, est $0.252
+  progress: 400 ok, 0 err, est $0.289
+
+DONE. 400 rows (400 ok). this session: est $0.289

@@ -1,0 +1,51 @@
+loaded 375 responses, 785 judgments, 5 personas, 75 prompt_ids
+
+========== EXP 7 ANALYSIS ==========
+Cost (generation): $1.285  (from response token counts)
+Cost (judging):    $2.938  (from judge_cost.txt if set)
+Total:             $4.223
+
+--- Persona-flip rate per model (% of 15 dilemmas where >=1 persona flipped vs default) ---
+model               n   flips    rate            95% CI  distinct/dilemma
+gpt-5.5            15       9   60.0%  [ 35.7- 80.2%]              1.87
+gpt-5.4            15      11   73.3%  [ 48.0- 89.1%]              2.00
+gpt-5.4-nano       14      11   78.6%  [ 52.4- 92.4%]              2.07
+gpt-4o             15      15  100.0%  [ 79.6-100.0%]              2.60
+gpt-4o-mini        15      13   86.7%  [ 62.1- 96.3%]              2.07
+
+--- Per-persona flip rate vs default (pooled across models) ---
+persona                      n   flips    rate            95% CI
+pragmatist                  73      31   42.5%  [ 31.8- 53.9%]
+deontologist                73      38   52.1%  [ 40.8- 63.1%]
+caring_friend               73      34   46.6%  [ 35.6- 57.9%]
+institutional_officer       74      34   45.9%  [ 35.1- 57.2%]
+
+--- Persona leakage: own-lexicon density gain over default ---
+persona                    pooled_n   mean_gain
+pragmatist                       75      +0.83%
+deontologist                     75      +1.93%
+caring_friend                    75      +1.01%
+institutional_officer            75      +1.34%
+
+--- Inter-judge agreement (argmax over A/B/C/D/REFUSAL) ---
+raw_agreement: 0.856    kappa: 0.793    n_paired: 354
+
+--- Cross-experiment ranking (Exp 2 'most steerable' vs Exp 7 'most persona-fluid') ---
+model              Exp 2 rank   Exp 7 rank   Exp 2 rate   Exp 7 rate
+gpt-5.5                     2            5        48.7%        60.0%
+gpt-5.4                     5            4        34.3%        73.3%
+gpt-5.4-nano                4            3        39.4%        78.6%
+gpt-4o                      3            1        47.1%       100.0%
+gpt-4o-mini                 1            2        64.5%        86.7%
+Spearman rho: 0.200
+
+--- Per (model, persona) word counts (mean) ---
+model                            default              pragmatist            deontologist           caring_friend   institutional_officer
+gpt-5.5                            141.3                   135.5                   119.7                   148.9                   145.0
+gpt-5.4                            135.5                   122.1                   103.2                   128.5                   137.1
+gpt-5.4-nano                       166.2                   161.5                   149.8                   177.6                   188.7
+gpt-4o                             129.0                   120.5                   111.5                   137.0                   113.3
+gpt-4o-mini                        122.1                   115.1                   114.7                   121.6                   116.6
+
+wrote <repo-root>/code/wsf_alignment/exp7_persona/analysis_out.json
+wrote <repo-root>/code/wsf_alignment/exp7_persona/chart.png

@@ -1,0 +1,16 @@
+loaded 12 dilemmas
+already have 0 valid records
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 19 ok, 1 err, est $0.012
+  progress: 38 ok, 2 err, est $0.042
+  progress: 58 ok, 2 err, est $0.068
+  progress: 76 ok, 4 err, est $0.128
+  progress: 95 ok, 5 err, est $0.210
+  progress: 114 ok, 6 err, est $0.327
+  progress: 133 ok, 7 err, est $0.417
+  progress: 150 ok, 10 err, est $0.455
+  progress: 170 ok, 10 err, est $0.495
+  progress: 190 ok, 10 err, est $0.537
+  progress: 210 ok, 10 err, est $0.566
+
+DONE. 235 rows (225 ok). this session: est $0.578

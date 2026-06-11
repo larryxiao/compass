@@ -1,0 +1,49 @@
+loaded 50 problems
+already have 0 valid response records
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 25 ok, 0 err, est $0.023
+  progress: 50 ok, 0 err, est $0.054
+  progress: 75 ok, 0 err, est $0.072
+  progress: 100 ok, 0 err, est $0.076
+  progress: 125 ok, 0 err, est $0.080
+  progress: 150 ok, 0 err, est $0.084
+  progress: 175 ok, 0 err, est $0.095
+  progress: 200 ok, 0 err, est $0.150
+  progress: 225 ok, 0 err, est $0.209
+  progress: 250 ok, 0 err, est $0.265
+  progress: 275 ok, 0 err, est $0.328
+  progress: 300 ok, 0 err, est $0.385
+  progress: 325 ok, 0 err, est $0.448
+  progress: 350 ok, 0 err, est $0.497
+  progress: 375 ok, 0 err, est $0.548
+  progress: 400 ok, 0 err, est $0.612
+  progress: 425 ok, 0 err, est $0.656
+  progress: 450 ok, 0 err, est $0.694
+  progress: 475 ok, 0 err, est $0.736
+  progress: 500 ok, 0 err, est $0.764
+  progress: 525 ok, 0 err, est $0.812
+  progress: 550 ok, 0 err, est $0.850
+  progress: 575 ok, 0 err, est $0.901
+  progress: 600 ok, 0 err, est $0.955
+  progress: 625 ok, 0 err, est $1.019
+  progress: 650 ok, 0 err, est $1.073
+  progress: 675 ok, 0 err, est $1.120
+  progress: 700 ok, 0 err, est $1.179
+  progress: 725 ok, 0 err, est $1.237
+  progress: 750 ok, 0 err, est $1.335
+
+DONE. 750 rows (750 ok). this session: est $1.335
+loaded 65 problems
+already have 750 valid response records
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 25 ok, 0 err, est $0.056
+  progress: 50 ok, 0 err, est $0.095
+  progress: 75 ok, 0 err, est $0.161
+  progress: 100 ok, 0 err, est $0.278
+  progress: 125 ok, 0 err, est $0.396
+  progress: 150 ok, 0 err, est $0.503
+  progress: 175 ok, 0 err, est $0.600
+  progress: 200 ok, 0 err, est $0.692
+  progress: 225 ok, 0 err, est $0.778
+
+DONE. 975 rows (975 ok). this session: est $0.778

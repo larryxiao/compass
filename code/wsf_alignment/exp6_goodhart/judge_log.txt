@@ -1,0 +1,22 @@
+loaded 450 valid responses to judge
+already judged: 0 (scenario,model,cond,judge) quadruples
+  judging: 50 ok, 0 err, est $0.184
+  judging: 100 ok, 0 err, est $0.378
+  judging: 150 ok, 0 err, est $0.576
+  judging: 200 ok, 0 err, est $0.761
+  judging: 250 ok, 0 err, est $0.981
+  judging: 300 ok, 0 err, est $1.169
+  judging: 350 ok, 0 err, est $1.349
+  judging: 400 ok, 0 err, est $1.557
+  judging: 450 ok, 0 err, est $1.746
+  judging: 500 ok, 0 err, est $1.932
+  judging: 550 ok, 0 err, est $2.125
+  judging: 600 ok, 0 err, est $2.330
+  judging: 650 ok, 0 err, est $2.509
+  judging: 700 ok, 0 err, est $2.710
+  judging: 750 ok, 0 err, est $2.904
+  judging: 800 ok, 0 err, est $3.095
+  judging: 850 ok, 0 err, est $3.282
+  judging: 900 ok, 0 err, est $3.469
+
+DONE. 900 judgments (900 ok). this session: est $3.469

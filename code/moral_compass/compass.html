@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your moral compass</title>
+<meta name="description" content="Your axis profile, side by side with eleven GPT and Gemini models.">
+<meta property="og:title" content="Your moral compass — Moral Compass">
+<meta property="og:description" content="Your axis profile, side by side with eleven GPT and Gemini models.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://larryxiao.github.io/compass/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://larryxiao.github.io/compass/og-card.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="compass">
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Moral Compass</a>
+    <nav>
+      <a href="findings.html">Findings</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="compass.html" class="current">Compass</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div id="compass-content" hidden>
+    <section class="view block">
+      <p class="kicker">Your compass &middot; <span id="compass-uid" class="dim"></span></p>
+      <h1 id="compass-headline">Your profile</h1>
+      <p class="lede" id="compass-sub"></p>
+    </section>
+
+    <section class="view block">
+      <h2>Your axis profile vs the median of eleven models</h2>
+      <p class="dim small">Each axis is a tension, not a polarity. Higher on one pole does not mean the other is bad &mdash; the signal is which one you reach for when you can only pick one. The faint gray polygon is the median of all eleven models (GPT and Gemini) on the same dilemmas you answered.</p>
+      <div id="radar-wrap"></div>
+      <table id="axis-table" class="axis-table" aria-label="Axis scores"></table>
+    </section>
+
+    <section class="view block">
+      <h2>Which models you agree with, on the dilemmas you answered</h2>
+      <p class="dim small">Counted as letter matches over your answered set.</p>
+      <div id="agreement-block"></div>
+    </section>
+
+    <section class="view block">
+      <h2>Take it with you</h2>
+      <p class="dim">A 1200&times;630 PNG you can download or share. No tracking pixel, no &ldquo;share to unlock,&rdquo; no social-graph counts.</p>
+      <div class="share-png-wrap">
+        <canvas id="share-canvas" width="1200" height="630" aria-label="Your share card"></canvas>
+      </div>
+      <div class="share-actions">
+        <button class="primary" id="btn-share">Share</button>
+        <button class="ghost" id="btn-download">Download PNG</button>
+        <button class="ghost" id="btn-more">Answer more questions</button>
+        <button class="ghost" id="btn-restart">Start over</button>
+      </div>
+      <p id="share-status" class="dim small" aria-live="polite"></p>
+    </section>
+  </div>
+
+  <div id="compass-gate-page" hidden></div>
+
+  <footer class="site-footer">
+    <p>Your compass is computed locally from your answers in this browser. There is no server.</p>
+    <p>
+      <a href="index.html">Home</a> &middot;
+      <a href="quiz.html">Quiz</a> &middot;
+      <a href="findings.html">Findings</a> &middot;
+      <a href="experiments.html">Experiments</a> &middot;
+      <a href="methodology.html">Methodology</a>
+    </p>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

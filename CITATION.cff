@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: "Moral Compass: A Cross-Family Probe of Frontier Model Values"
+message: "If you use this dataset or methodology, please cite as below."
+type: dataset
+authors:
+  - given-names: "Di"
+    family-names: "Xiao"
+    email: "xiaodi.larry@gmail.com"
+abstract: >-
+  A 140-dilemma corpus, 7 alignment experiments, and an interactive site that
+  compare frontier language models on everyday moral dilemmas. Each model answers
+  in free text with the options hidden; two LLM judges then map answers to
+  A/B/C/D. The headline analysis spans 11 comparable models across two families,
+  five GPT (gpt-5.5, gpt-5.4, gpt-5.4-nano, gpt-4o, gpt-4o-mini) on Azure OpenAI
+  and six Gemini (3.1 Pro, 3.5 Flash, 3.1 Flash-Lite, 2.5 Pro, 2.5 Flash, 2.5
+  Flash-Lite) on Google Vertex AI; four Claude models (including Claude Fable 5)
+  are included as a flagged, statistics-excluded probe run through the Claude
+  Code agent. Inter-judge
+  agreement is 85.4%. Findings include systematic GPT-vs-Gemini disagreement on
+  21 of 140 dilemmas, an ~26% answer-flip rate under name and gender swaps, and
+  divergent per-model dispositions across sycophancy, value-conflict,
+  engagement-hacking, evaluation-awareness, sandbagging, Goodhart, and persona
+  probes. The two judges are themselves among the subjects; results that turn on
+  same-family judging are flagged and excluded from the aggregate numbers.
+keywords:
+  - "ai alignment"
+  - "moral evaluation"
+  - "llm benchmark"
+  - "cross-family model comparison"
+  - "gpt-5"
+  - "gemini"
+  - "dilemma probe"
+license: MIT
+version: "2.1.0"
+date-released: "2026-06-09"
+repository-code: "https://github.com/larryxiao/compass"
+url: "https://github.com/larryxiao/compass"
+references:
+  - type: video
+    title: "Translating Claude's Thoughts into Language"
+    authors:
+      - name: "Anthropic"
+    year: 2026
+    url: "https://www.youtube.com/watch?v=j2knrqAzYVY"

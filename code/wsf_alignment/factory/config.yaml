@@ -1,0 +1,90 @@
+# WS-F factory: endpoints for the self-improving dilemma generator.
+#
+# Mirrors the deployment list from code/wsb_synthdata/config.yaml but tagged
+# by role so the orchestrator can pick which model runs which agent.
+#
+# Roles:
+#   setup    — generates new dilemma candidates
+#   decide   — answers a dilemma cold (no options shown)
+#   evaluate — judges a dilemma + decision-agent responses
+#
+# Same endpoint can wear multiple hats (with a `roles: [...]` list).
+
+global:
+  total_dollar_cap: 50.00            # per-invocation soft cap for factory runs
+  mtd_emergency_stop: 11000.00       # sub-wide MTD ceiling (same as WS-B)
+  cost_poll_seconds: 300
+  output_dir: ./output
+  state_dir: ./state
+
+deny_deployment_prefixes:
+  - claude-                          # not covered by sponsorship
+
+# Default model assignments (overridable per CLI flag).
+# Setup wants a strong, articulate model — gpt-5.5 is the obvious choice.
+# Evaluators are 4o + 5.4 (different families, see README §evaluator-choice).
+defaults:
+  setup_model: gpt-5.5
+  evaluator_models:
+    - gpt-4o          # primary: out-of-family from the decision agents
+    - gpt-5.4         # secondary: catches 4o's blind spots
+  decision_models:    # cold-respond to each dilemma
+    - gpt-5.5
+    - gpt-5.4
+    - gpt-5.4-nano
+    - gpt-4o
+    - gpt-4o-mini
+
+# Endpoint catalog. Keys mirror runner.py:Endpoint dataclass fields.
+# `model_condition` is the short label used in roles/defaults above.
+endpoints:
+
+  - name: your-aoai-resource-2/gpt-5.5
+    base_url: https://your-aoai-resource-2.cognitiveservices.azure.com/
+    api_version: "2024-10-21"
+    deployment: aoai-eastus2
+    model_condition: gpt-5.5
+    tpm_cap: 10000
+    api_key_env: AOAI_KEY_AOAI_RESOURCE_2
+
+  - name: your-aoai-resource-2/gpt-5.4
+    base_url: https://your-aoai-resource-2.cognitiveservices.azure.com/
+    api_version: "2024-10-21"
+    deployment: gpt-5.4
+    model_condition: gpt-5.4
+    tpm_cap: 5000
+    api_key_env: AOAI_KEY_AOAI_RESOURCE_2
+
+  - name: your-aoai-resource-2/gpt-5.4-nano
+    base_url: https://your-aoai-resource-2.cognitiveservices.azure.com/
+    api_version: "2024-10-21"
+    deployment: gpt-5.4-nano
+    model_condition: gpt-5.4-nano
+    tpm_cap: 75000
+    api_key_env: AOAI_KEY_AOAI_RESOURCE_2
+
+  - name: your-aoai-resource-1/gpt-4o
+    base_url: https://your-aoai-resource-1.cognitiveservices.azure.com/
+    api_version: "2024-10-21"
+    deployment: gpt-4o
+    model_condition: gpt-4o
+    tpm_cap: 450
+    api_key_env: AOAI_KEY_AOAI_RESOURCE_1
+
+  - name: your-aoai-resource-1/gpt-4o-mini
+    base_url: https://your-aoai-resource-1.cognitiveservices.azure.com/
+    api_version: "2024-10-21"
+    deployment: gpt-4o-mini
+    model_condition: gpt-4o-mini
+    tpm_cap: 1021
+    api_key_env: AOAI_KEY_AOAI_RESOURCE_1
+
+# Token budgets per agent. gpt-5.x reasoning eats budget before content
+# emerges — we discovered this empirically in WS-B (gpt-5.5 returned empty
+# content with max=400). Setup is the most expensive because the JSON output
+# alone is ~1500 tokens.
+token_budgets:
+  setup_max_completion: 8000      # 1500 output + 4-6× reasoning headroom
+  decide_max_completion: 4000     # one short paragraph + gpt-5.x reasoning headroom (WS-B lesson)
+  evaluate_max_completion: 4000   # rubric JSON + critique paragraphs
+  refine_max_completion: 6000     # critique synthesis + new prompt draft

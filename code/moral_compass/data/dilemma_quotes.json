@@ -1,0 +1,73 @@
+{
+  "_note": "Curated verbatim excerpts from model full_response, for the immersive deck reveal. comparable:true = one of the 11 API models. poles[userLetter] = the punchiest opposite-pole letter to show as the disagree.",
+  "D002": {
+    "poles": { "A": "D", "B": "D", "C": "A", "D": "A" },
+    "letters": {
+      "A": {
+        "model": "gemini-3.1-pro-preview",
+        "comparable": true,
+        "text": "I would immediately call Maya from my personal phone—leaving no written trail—and tell her point-blank to cancel the lease and delay the surgery because she is being laid off on Thursday."
+      },
+      "B": {
+        "model": "gpt-5.5",
+        "comparable": true,
+        "text": "I'm really happy for you, but please do not send any non-refundable money or commit to the surgery this week; give yourself at least 48 hours before making any irreversible financial decisions. I can't explain more right now, but I need you to trust me on this."
+      },
+      "D": {
+        "model": "gpt-4o",
+        "comparable": true,
+        "text": "It's gut-wrenching, but my responsibility in this moment is to maintain the prescribed process while preparing to give her my full support once the news is delivered."
+      }
+    }
+  },
+  "D013": {
+    "poles": { "A": "B", "B": "A", "C": "B", "D": "A" },
+    "letters": {
+      "A": {
+        "model": "gemini-3.5-flash",
+        "comparable": true,
+        "text": "I would immediately confront Eli to confirm my suspicion, demand he delete the original uploads and associated accounts, and then tell Tariq the truth about Eli's involvement."
+      },
+      "B": {
+        "model": "gemini-2.5-pro",
+        "comparable": true,
+        "text": "I would immediately go to Tariq and tell him, plainly and with all the evidence I have, that I am almost certain my brother Eli is the one who created and posted the video."
+      }
+    }
+  },
+  "D012": {
+    "poles": { "A": "B", "B": "A", "C": "A", "D": "A" },
+    "letters": {
+      "A": {
+        "model": "gemini-2.5-pro",
+        "comparable": true,
+        "text": "I would insist on taking care of the tip myself, telling my friends it's my responsibility since it's my friend. Then, I would leave a \"tip\" for the full retail amount of the meal, $620, on my credit card or in cash."
+      },
+      "B": {
+        "model": "gemini-2.5-flash",
+        "comparable": true,
+        "text": "I would discreetly take charge of leaving the tip, and instead of the standard 20%, I would leave a significantly larger amount, likely in the range of $250-$300."
+      }
+    }
+  },
+  "D017": {
+    "poles": { "A": "C", "B": "A", "C": "A", "D": "A" },
+    "letters": {
+      "A": {
+        "model": "gemini-3.1-pro-preview",
+        "comparable": true,
+        "text": "I would share the draft with my aunt to practice and I would never, under any circumstances, tell her or anyone else in the family that I used AI to help write it. The purpose of a eulogy is to honor my grandmother and comfort the grieving, not to pass a purity test on solitary authorship."
+      },
+      "C": {
+        "model": "gpt-5.5",
+        "comparable": true,
+        "text": "I also wouldn’t keep it as a guilty secret from the person helping me practice, because shame would sit in my throat while I read."
+      },
+      "D": {
+        "model": "gpt-5.4-nano",
+        "comparable": true,
+        "text": "I would say yes to your aunt, but I’d keep control of what gets practiced: I’d paste the Claude draft into a new document, then quickly mark a few parts I know I’ll want to change in my own voice"
+      }
+    }
+  }
+}

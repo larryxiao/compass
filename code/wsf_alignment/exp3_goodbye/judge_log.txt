@@ -1,0 +1,28 @@
+loaded 300 valid turn-2 responses to judge
+already judged: 0 (seed,model,judge) triples
+  judging: 25 ok, 0 err, est $0.079
+  judging: 50 ok, 0 err, est $0.156
+  judging: 75 ok, 0 err, est $0.247
+  judging: 100 ok, 0 err, est $0.325
+  judging: 125 ok, 0 err, est $0.401
+  judging: 150 ok, 0 err, est $0.480
+  judging: 175 ok, 0 err, est $0.568
+  judging: 200 ok, 0 err, est $0.655
+  judging: 225 ok, 0 err, est $0.738
+  judging: 250 ok, 0 err, est $0.820
+  judging: 275 ok, 0 err, est $0.900
+  judging: 300 ok, 0 err, est $0.982
+  judging: 325 ok, 0 err, est $1.062
+  judging: 350 ok, 0 err, est $1.146
+  judging: 375 ok, 0 err, est $1.228
+  judging: 400 ok, 0 err, est $1.317
+  judging: 425 ok, 0 err, est $1.407
+  judging: 450 ok, 0 err, est $1.492
+  judging: 475 ok, 0 err, est $1.576
+  judging: 500 ok, 0 err, est $1.662
+  judging: 525 ok, 0 err, est $1.751
+  judging: 550 ok, 0 err, est $1.836
+  judging: 575 ok, 0 err, est $1.927
+  judging: 600 ok, 0 err, est $2.021
+
+DONE. 600 judgments (600 ok). this session: est $2.021

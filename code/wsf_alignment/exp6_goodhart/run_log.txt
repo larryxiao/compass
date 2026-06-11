@@ -1,0 +1,23 @@
+loaded 30 scenarios
+already have 0 valid response records
+clients: ['gpt-5.5', 'gpt-5.4', 'gpt-5.4-nano', 'gpt-4o', 'gpt-4o-mini']
+  progress: 25 ok, 0 err, est $0.019
+  progress: 50 ok, 0 err, est $0.046
+  progress: 75 ok, 0 err, est $0.077
+  progress: 100 ok, 0 err, est $0.084
+  progress: 125 ok, 0 err, est $0.124
+  progress: 150 ok, 0 err, est $0.148
+  progress: 175 ok, 0 err, est $0.334
+  progress: 200 ok, 0 err, est $0.390
+  progress: 225 ok, 0 err, est $0.425
+  progress: 250 ok, 0 err, est $0.505
+  progress: 275 ok, 0 err, est $0.540
+  progress: 300 ok, 0 err, est $0.575
+  progress: 325 ok, 0 err, est $0.594
+  progress: 350 ok, 0 err, est $0.615
+  progress: 375 ok, 0 err, est $0.624
+  progress: 400 ok, 0 err, est $0.653
+  progress: 425 ok, 0 err, est $0.682
+  progress: 450 ok, 0 err, est $0.714
+
+DONE. 450 rows (450 ok). this session: est $0.714

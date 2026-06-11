@@ -1,0 +1,53 @@
+.DS_Store
+*.pyc
+__pycache__/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+secrets/
+**/credentials.json
+**/.azure-credentials
+node_modules/
+.venv/
+venv/
+
+# WS-B local artifacts (re-generated on demand)
+code/wsb_synthdata/.venv/
+code/wsb_synthdata/output/
+code/wsb_synthdata/output_archive/
+code/wsb_synthdata/output_premium/
+code/wsb_synthdata/checkpoints/
+code/wsb_synthdata/corpus_*.jsonl
+code/wsb_synthdata/merged/
+
+# WS-E artifacts (re-generated, large PNGs)
+code/wse_creative/.venv/
+code/wse_creative/output/
+
+# WS-F factory in-flight artifacts
+code/wsf_alignment/factory/.venv/
+code/wsf_alignment/factory/output/runs_*.jsonl
+code/wsf_alignment/factory/logs/
+code/wsf_alignment/precompute/.venv/
+code/wsf_alignment/precompute/output/
+
+code/wsb_synthdata/corpus_audited_*.jsonl
+
+# GTM planning — not part of the public artifact
+gtm/
+
+# launch/ runtime — secrets + persistent state
+launch/config.json
+launch/state.json
+launch/drafts/daily/
+launch/.venv/
+
+# WS-F precompute provenance / superseded snapshots (kept locally, not in the repo)
+code/wsf_alignment/precompute/*.bak
+code/wsf_alignment/precompute/data_for_web.5gpt.json
+code/wsf_alignment/precompute/mapped_options.gpt_judges.jsonl
+code/wsf_alignment/precompute/mapped_options.partial_2_5_pro_judge.jsonl
+# Claude-via-CLI generation provenance — rows are merged into responses.jsonl (canonical)
+code/wsf_alignment/precompute/responses_claude.jsonl

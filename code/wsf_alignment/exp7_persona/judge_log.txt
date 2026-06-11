@@ -1,0 +1,22 @@
+loaded 343 valid responses to judge across 75 prompt_ids
+already have 0 judgments
+  judging: 50 ok, 0 err, est $0.196
+  judging: 95 ok, 5 err, est $0.384
+  judging: 145 ok, 5 err, est $0.591
+  judging: 192 ok, 8 err, est $0.783
+  judging: 239 ok, 11 err, est $0.979
+  judging: 289 ok, 11 err, est $1.192
+  judging: 337 ok, 13 err, est $1.378
+  judging: 386 ok, 14 err, est $1.578
+  judging: 428 ok, 22 err, est $1.748
+  judging: 476 ok, 24 err, est $1.944
+  judging: 526 ok, 24 err, est $2.150
+  judging: 573 ok, 27 err, est $2.339
+  judging: 620 ok, 30 err, est $2.529
+
+DONE. 686 judgments (651 ok). this session: est $2.655
+loaded 375 valid responses to judge across 75 prompt_ids
+already have 651 judgments
+  judging: 24 ok, 26 err, est $0.096
+
+DONE. 785 judgments (724 ok). this session: est $0.283

@@ -1,0 +1,17 @@
+/*.html
+  Cache-Control: public, max-age=300
+
+/app.js
+  Cache-Control: public, max-age=86400
+
+/style.css
+  Cache-Control: public, max-age=86400
+
+/data/*.json
+  Cache-Control: public, max-age=2592000, immutable
+
+/data/scenes/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/og-card.png
+  Cache-Control: public, max-age=86400
