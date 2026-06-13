@@ -51,3 +51,11 @@ code/wsf_alignment/precompute/mapped_options.gpt_judges.jsonl
 code/wsf_alignment/precompute/mapped_options.partial_2_5_pro_judge.jsonl
 # Claude-via-CLI generation provenance — rows are merged into responses.jsonl (canonical)
 code/wsf_alignment/precompute/responses_claude.jsonl
+
+# local-only: launch ops, run env, pipeline byproducts
+private/
+.env.local
+code/wsf_alignment/precompute/*_gen.log
+code/wsf_alignment/precompute/*_judge.log
+code/wsf_alignment/precompute/*.bak
+code/wsf_alignment/precompute/responses.jsonl.pre_*
