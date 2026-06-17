@@ -31,6 +31,7 @@ from __future__ import annotations
 import collections
 import json
 import math
+import os
 import re
 import statistics
 import sys
@@ -42,11 +43,12 @@ from common import LOGICAL_MODELS  # noqa: E402
 
 RESPONSES_PATH = HERE / "responses.jsonl"
 JUDGMENTS_PATH = HERE / "judgments.jsonl"
-OUT_JSON = HERE / "analysis_out.json"
+OUT_JSON = Path(os.environ.get("ANALYSIS_OUT", str(HERE / "analysis_out.json")))
 CHART_PATH = HERE / "chart.png"
 
 # 11-model cross-family lineup (5 GPT + 6 Gemini), from common.LOGICAL_MODELS.
-MODELS = LOGICAL_MODELS
+_DEFAULT_MODELS = LOGICAL_MODELS
+MODELS = os.environ["ANALYSIS_MODELS"].split(",") if os.environ.get("ANALYSIS_MODELS") else _DEFAULT_MODELS
 # Two Vertex Gemini judges; the analysis reads ONLY these judge rows and
 # ensembles both (option probs averaged; introspection either-judge / mean).
 JUDGES = ["gemini-2.5-flash", "gemini-3.5-flash"]

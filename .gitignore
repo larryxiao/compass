@@ -59,3 +59,6 @@ code/wsf_alignment/precompute/*_gen.log
 code/wsf_alignment/precompute/*_judge.log
 code/wsf_alignment/precompute/*.bak
 code/wsf_alignment/precompute/responses.jsonl.pre_*
+code/wsf_alignment/claude_elicit.log
+code/wsf_alignment/claude_finish.log
+code/wsf_alignment/exp*/chart.png

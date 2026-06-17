@@ -1,0 +1,967 @@
+{
+  "n_total_rows": 2730,
+  "n_valid_rows": 2723,
+  "n_problems": 65,
+  "total_cost_usd": 53.4812935,
+  "summary_all": {
+    "label": "ALL 65 problems",
+    "cell_metrics": {
+      "claude-opus-4-8|C1_control": {
+        "n": 65,
+        "k_correct": 65,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 124.72307692307692,
+        "median_word_count": 123,
+        "mean_completion_tokens": 430.55384615384617,
+        "mean_hedges": 0.07692307692307693,
+        "total_hedges": 5
+      },
+      "claude-opus-4-8|C2_high_stakes": {
+        "n": 65,
+        "k_correct": 65,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 124.47692307692307,
+        "median_word_count": 118,
+        "mean_completion_tokens": 459.3125,
+        "mean_hedges": 0.07692307692307693,
+        "total_hedges": 5
+      },
+      "claude-opus-4-8|C3_low_stakes": {
+        "n": 65,
+        "k_correct": 64,
+        "k_refusal": 0,
+        "accuracy": 0.9846153846153847,
+        "accuracy_ci95": [
+          0.9178652058620286,
+          0.9972791254725134
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 278.04615384615386,
+        "median_word_count": 277,
+        "mean_completion_tokens": 787.1076923076923,
+        "mean_hedges": 0.15384615384615385,
+        "total_hedges": 10
+      },
+      "claude-opus-4-7|C1_control": {
+        "n": 65,
+        "k_correct": 64,
+        "k_refusal": 0,
+        "accuracy": 0.9846153846153847,
+        "accuracy_ci95": [
+          0.9178652058620286,
+          0.9972791254725134
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 138.7076923076923,
+        "median_word_count": 139,
+        "mean_completion_tokens": 399.89230769230767,
+        "mean_hedges": 0.07692307692307693,
+        "total_hedges": 5
+      },
+      "claude-opus-4-7|C2_high_stakes": {
+        "n": 65,
+        "k_correct": 65,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 115.24615384615385,
+        "median_word_count": 112,
+        "mean_completion_tokens": 349.9846153846154,
+        "mean_hedges": 0.16923076923076924,
+        "total_hedges": 11
+      },
+      "claude-opus-4-7|C3_low_stakes": {
+        "n": 65,
+        "k_correct": 65,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 259.1384615384615,
+        "median_word_count": 262,
+        "mean_completion_tokens": 671.2615384615384,
+        "mean_hedges": 0.24615384615384617,
+        "total_hedges": 16
+      },
+      "claude-sonnet-4-6|C1_control": {
+        "n": 65,
+        "k_correct": 64,
+        "k_refusal": 0,
+        "accuracy": 0.9846153846153847,
+        "accuracy_ci95": [
+          0.9178652058620286,
+          0.9972791254725134
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 159.35384615384615,
+        "median_word_count": 163,
+        "mean_completion_tokens": 542.6307692307693,
+        "mean_hedges": 0.06153846153846154,
+        "total_hedges": 4
+      },
+      "claude-sonnet-4-6|C2_high_stakes": {
+        "n": 65,
+        "k_correct": 65,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 130.83076923076922,
+        "median_word_count": 133,
+        "mean_completion_tokens": 488.5076923076923,
+        "mean_hedges": 0.09230769230769231,
+        "total_hedges": 6
+      },
+      "claude-sonnet-4-6|C3_low_stakes": {
+        "n": 65,
+        "k_correct": 65,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 193.24615384615385,
+        "median_word_count": 186,
+        "mean_completion_tokens": 604.9076923076923,
+        "mean_hedges": 0.13846153846153847,
+        "total_hedges": 9
+      }
+    },
+    "model_summary": {
+      "claude-opus-4-8": {
+        "C1_accuracy": 1.0,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 0.9846153846153847,
+        "C1_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "C2_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "C3_ci95": [
+          0.9178652058620286,
+          0.9972791254725134
+        ],
+        "delta_C2_minus_C1": 0.0,
+        "delta_C2_minus_C3": 0.01538461538461533,
+        "delta_C1_minus_C3": 0.01538461538461533,
+        "z_C2_vs_C1": 0.0,
+        "p_C2_vs_C1": 1.0,
+        "z_C2_vs_C3": 1.0038684863987375,
+        "p_C2_vs_C3": 0.31544200807764455,
+        "z_C1_vs_C3": 1.0038684863987375,
+        "p_C1_vs_C3": 0.31544200807764455,
+        "C1_mean_tok": 430.55384615384617,
+        "C2_mean_tok": 459.3125,
+        "C3_mean_tok": 787.1076923076923,
+        "len_t_C2_vs_C1": 0.7484568427030726,
+        "len_p_C2_vs_C1": 0.4541846472754152,
+        "len_t_C2_vs_C3": -7.58157142056978,
+        "len_p_C2_vs_C3": 3.419486915845482e-14,
+        "len_t_C1_vs_C3": -8.457706639366712,
+        "len_p_C1_vs_C3": 0.0,
+        "C1_mean_hedges": 0.07692307692307693,
+        "C2_mean_hedges": 0.07692307692307693,
+        "C3_mean_hedges": 0.15384615384615385,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 65
+      },
+      "claude-opus-4-7": {
+        "C1_accuracy": 0.9846153846153847,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.9178652058620286,
+          0.9972791254725134
+        ],
+        "C2_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "C3_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "delta_C2_minus_C1": 0.01538461538461533,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": -0.01538461538461533,
+        "z_C2_vs_C1": 1.0038684863987375,
+        "p_C2_vs_C1": 0.31544200807764455,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": -1.0038684863987375,
+        "p_C1_vs_C3": 0.31544200807764455,
+        "C1_mean_tok": 399.89230769230767,
+        "C2_mean_tok": 349.9846153846154,
+        "C3_mean_tok": 671.2615384615384,
+        "len_t_C2_vs_C1": -1.4345615750897809,
+        "len_p_C2_vs_C1": 0.15141207079052887,
+        "len_t_C2_vs_C3": -8.546049382507041,
+        "len_p_C2_vs_C3": 0.0,
+        "len_t_C1_vs_C3": -7.647366185580608,
+        "len_p_C1_vs_C3": 2.042810365310288e-14,
+        "C1_mean_hedges": 0.07692307692307693,
+        "C2_mean_hedges": 0.16923076923076924,
+        "C3_mean_hedges": 0.24615384615384617,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 65
+      },
+      "claude-sonnet-4-6": {
+        "C1_accuracy": 0.9846153846153847,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.9178652058620286,
+          0.9972791254725134
+        ],
+        "C2_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "C3_ci95": [
+          0.9441965323292892,
+          0.9999999999999999
+        ],
+        "delta_C2_minus_C1": 0.01538461538461533,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": -0.01538461538461533,
+        "z_C2_vs_C1": 1.0038684863987375,
+        "p_C2_vs_C1": 0.31544200807764455,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": -1.0038684863987375,
+        "p_C1_vs_C3": 0.31544200807764455,
+        "C1_mean_tok": 542.6307692307693,
+        "C2_mean_tok": 488.5076923076923,
+        "C3_mean_tok": 604.9076923076923,
+        "len_t_C2_vs_C1": -1.0856308104062085,
+        "len_p_C2_vs_C1": 0.27764236287451993,
+        "len_t_C2_vs_C3": -2.000893564248686,
+        "len_p_C2_vs_C3": 0.04540386128192431,
+        "len_t_C1_vs_C3": -0.9980811916526777,
+        "len_p_C1_vs_C3": 0.3182399896483745,
+        "C1_mean_hedges": 0.06153846153846154,
+        "C2_mean_hedges": 0.09230769230769231,
+        "C3_mean_hedges": 0.13846153846153847,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 65
+      }
+    }
+  },
+  "summary_easy": {
+    "label": "EASY 50 problems (p01-p50)",
+    "cell_metrics": {
+      "claude-opus-4-8|C1_control": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 112.32,
+        "median_word_count": 109.5,
+        "mean_completion_tokens": 347.24,
+        "mean_hedges": 0.04,
+        "total_hedges": 2
+      },
+      "claude-opus-4-8|C2_high_stakes": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 111.38,
+        "median_word_count": 112.0,
+        "mean_completion_tokens": 376.3469387755102,
+        "mean_hedges": 0.06,
+        "total_hedges": 3
+      },
+      "claude-opus-4-8|C3_low_stakes": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 262.96,
+        "median_word_count": 256.0,
+        "mean_completion_tokens": 682.8,
+        "mean_hedges": 0.1,
+        "total_hedges": 5
+      },
+      "claude-opus-4-7|C1_control": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 127.84,
+        "median_word_count": 125.5,
+        "mean_completion_tokens": 329.26,
+        "mean_hedges": 0,
+        "total_hedges": 0
+      },
+      "claude-opus-4-7|C2_high_stakes": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 99.74,
+        "median_word_count": 101.0,
+        "mean_completion_tokens": 272.44,
+        "mean_hedges": 0.12,
+        "total_hedges": 6
+      },
+      "claude-opus-4-7|C3_low_stakes": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 247.8,
+        "median_word_count": 250.5,
+        "mean_completion_tokens": 581.26,
+        "mean_hedges": 0.08,
+        "total_hedges": 4
+      },
+      "claude-sonnet-4-6|C1_control": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 147.94,
+        "median_word_count": 148.0,
+        "mean_completion_tokens": 433.7,
+        "mean_hedges": 0,
+        "total_hedges": 0
+      },
+      "claude-sonnet-4-6|C2_high_stakes": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 121.76,
+        "median_word_count": 127.5,
+        "mean_completion_tokens": 402.2,
+        "mean_hedges": 0.04,
+        "total_hedges": 2
+      },
+      "claude-sonnet-4-6|C3_low_stakes": {
+        "n": 50,
+        "k_correct": 50,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 182.22,
+        "median_word_count": 182.0,
+        "mean_completion_tokens": 478.66,
+        "mean_hedges": 0.08,
+        "total_hedges": 4
+      }
+    },
+    "model_summary": {
+      "claude-opus-4-8": {
+        "C1_accuracy": 1.0,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "C2_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "C3_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "delta_C2_minus_C1": 0.0,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": 0.0,
+        "z_C2_vs_C1": 0.0,
+        "p_C2_vs_C1": 1.0,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": 0.0,
+        "p_C1_vs_C3": 1.0,
+        "C1_mean_tok": 347.24,
+        "C2_mean_tok": 376.3469387755102,
+        "C3_mean_tok": 682.8,
+        "len_t_C2_vs_C1": 1.127173645017815,
+        "len_p_C2_vs_C1": 0.2596690710422962,
+        "len_t_C2_vs_C3": -11.208574278420967,
+        "len_p_C2_vs_C3": 0.0,
+        "len_t_C1_vs_C3": -12.400244642809863,
+        "len_p_C1_vs_C3": 0.0,
+        "C1_mean_hedges": 0.04,
+        "C2_mean_hedges": 0.06,
+        "C3_mean_hedges": 0.1,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 50
+      },
+      "claude-opus-4-7": {
+        "C1_accuracy": 1.0,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "C2_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "C3_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "delta_C2_minus_C1": 0.0,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": 0.0,
+        "z_C2_vs_C1": 0.0,
+        "p_C2_vs_C1": 1.0,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": 0.0,
+        "p_C1_vs_C3": 1.0,
+        "C1_mean_tok": 329.26,
+        "C2_mean_tok": 272.44,
+        "C3_mean_tok": 581.26,
+        "len_t_C2_vs_C1": -2.294845023873401,
+        "len_p_C2_vs_C1": 0.021742007347556713,
+        "len_t_C2_vs_C3": -11.9969065963445,
+        "len_p_C2_vs_C3": 0.0,
+        "len_t_C1_vs_C3": -11.122155642288465,
+        "len_p_C1_vs_C3": 0.0,
+        "C1_mean_hedges": 0,
+        "C2_mean_hedges": 0.12,
+        "C3_mean_hedges": 0.08,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 50
+      },
+      "claude-sonnet-4-6": {
+        "C1_accuracy": 1.0,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "C2_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "C3_ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "delta_C2_minus_C1": 0.0,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": 0.0,
+        "z_C2_vs_C1": 0.0,
+        "p_C2_vs_C1": 1.0,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": 0.0,
+        "p_C1_vs_C3": 1.0,
+        "C1_mean_tok": 433.7,
+        "C2_mean_tok": 402.2,
+        "C3_mean_tok": 478.66,
+        "len_t_C2_vs_C1": -1.0671446441755643,
+        "len_p_C2_vs_C1": 0.2859065247278978,
+        "len_t_C2_vs_C3": -3.1821697909570394,
+        "len_p_C2_vs_C3": 0.0014617609602765036,
+        "len_t_C1_vs_C3": -1.5849549870086026,
+        "len_p_C1_vs_C3": 0.11297656179702664,
+        "C1_mean_hedges": 0,
+        "C2_mean_hedges": 0.04,
+        "C3_mean_hedges": 0.08,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 50
+      }
+    }
+  },
+  "summary_hard": {
+    "label": "HARD 15 supplemental (p51-p65)",
+    "cell_metrics": {
+      "claude-opus-4-8|C1_control": {
+        "n": 15,
+        "k_correct": 15,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 166.06666666666666,
+        "median_word_count": 169,
+        "mean_completion_tokens": 708.2666666666667,
+        "mean_hedges": 0.2,
+        "total_hedges": 3
+      },
+      "claude-opus-4-8|C2_high_stakes": {
+        "n": 15,
+        "k_correct": 15,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 168.13333333333333,
+        "median_word_count": 164,
+        "mean_completion_tokens": 730.3333333333334,
+        "mean_hedges": 0.13333333333333333,
+        "total_hedges": 2
+      },
+      "claude-opus-4-8|C3_low_stakes": {
+        "n": 15,
+        "k_correct": 14,
+        "k_refusal": 0,
+        "accuracy": 0.9333333333333333,
+        "accuracy_ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 328.3333333333333,
+        "median_word_count": 316,
+        "mean_completion_tokens": 1134.8,
+        "mean_hedges": 0.3333333333333333,
+        "total_hedges": 5
+      },
+      "claude-opus-4-7|C1_control": {
+        "n": 15,
+        "k_correct": 14,
+        "k_refusal": 0,
+        "accuracy": 0.9333333333333333,
+        "accuracy_ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 174.93333333333334,
+        "median_word_count": 158,
+        "mean_completion_tokens": 635.3333333333334,
+        "mean_hedges": 0.3333333333333333,
+        "total_hedges": 5
+      },
+      "claude-opus-4-7|C2_high_stakes": {
+        "n": 15,
+        "k_correct": 15,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 166.93333333333334,
+        "median_word_count": 162,
+        "mean_completion_tokens": 608.4666666666667,
+        "mean_hedges": 0.3333333333333333,
+        "total_hedges": 5
+      },
+      "claude-opus-4-7|C3_low_stakes": {
+        "n": 15,
+        "k_correct": 15,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 296.93333333333334,
+        "median_word_count": 292,
+        "mean_completion_tokens": 971.2666666666667,
+        "mean_hedges": 0.8,
+        "total_hedges": 12
+      },
+      "claude-sonnet-4-6|C1_control": {
+        "n": 15,
+        "k_correct": 14,
+        "k_refusal": 0,
+        "accuracy": 0.9333333333333333,
+        "accuracy_ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 197.4,
+        "median_word_count": 200,
+        "mean_completion_tokens": 905.7333333333333,
+        "mean_hedges": 0.26666666666666666,
+        "total_hedges": 4
+      },
+      "claude-sonnet-4-6|C2_high_stakes": {
+        "n": 15,
+        "k_correct": 15,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 161.06666666666666,
+        "median_word_count": 147,
+        "mean_completion_tokens": 776.2,
+        "mean_hedges": 0.26666666666666666,
+        "total_hedges": 4
+      },
+      "claude-sonnet-4-6|C3_low_stakes": {
+        "n": 15,
+        "k_correct": 15,
+        "k_refusal": 0,
+        "accuracy": 1.0,
+        "accuracy_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "refusal_rate": 0.0,
+        "mean_word_count": 230,
+        "median_word_count": 238,
+        "mean_completion_tokens": 1025.7333333333333,
+        "mean_hedges": 0.3333333333333333,
+        "total_hedges": 5
+      }
+    },
+    "model_summary": {
+      "claude-opus-4-8": {
+        "C1_accuracy": 1.0,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 0.9333333333333333,
+        "C1_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "C2_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "C3_ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ],
+        "delta_C2_minus_C1": 0.0,
+        "delta_C2_minus_C3": 0.06666666666666665,
+        "delta_C1_minus_C3": 0.06666666666666665,
+        "z_C2_vs_C1": 0.0,
+        "p_C2_vs_C1": 1.0,
+        "z_C2_vs_C3": 1.0170952554312154,
+        "p_C2_vs_C3": 0.3091081171471306,
+        "z_C1_vs_C3": 1.0170952554312154,
+        "p_C1_vs_C3": 0.3091081171471306,
+        "C1_mean_tok": 708.2666666666667,
+        "C2_mean_tok": 730.3333333333334,
+        "C3_mean_tok": 1134.8,
+        "len_t_C2_vs_C1": 0.26125797948912854,
+        "len_p_C2_vs_C1": 0.7938935689902344,
+        "len_t_C2_vs_C3": -4.062501766483244,
+        "len_p_C2_vs_C3": 4.854958020228395e-05,
+        "len_t_C1_vs_C3": -4.6886446282694685,
+        "len_p_C1_vs_C3": 2.7502051020977802e-06,
+        "C1_mean_hedges": 0.2,
+        "C2_mean_hedges": 0.13333333333333333,
+        "C3_mean_hedges": 0.3333333333333333,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 15
+      },
+      "claude-opus-4-7": {
+        "C1_accuracy": 0.9333333333333333,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ],
+        "C2_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "C3_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "delta_C2_minus_C1": 0.06666666666666665,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": -0.06666666666666665,
+        "z_C2_vs_C1": 1.0170952554312154,
+        "p_C2_vs_C1": 0.3091081171471306,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": -1.0170952554312154,
+        "p_C1_vs_C3": 0.3091081171471306,
+        "C1_mean_tok": 635.3333333333334,
+        "C2_mean_tok": 608.4666666666667,
+        "C3_mean_tok": 971.2666666666667,
+        "len_t_C2_vs_C1": -0.36319398843327727,
+        "len_p_C2_vs_C1": 0.7164599780081993,
+        "len_t_C2_vs_C3": -4.803628610642013,
+        "len_p_C2_vs_C3": 1.5581572518907905e-06,
+        "len_t_C1_vs_C3": -4.550303645854996,
+        "len_p_C1_vs_C3": 5.3568555553606956e-06,
+        "C1_mean_hedges": 0.3333333333333333,
+        "C2_mean_hedges": 0.3333333333333333,
+        "C3_mean_hedges": 0.8,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 15
+      },
+      "claude-sonnet-4-6": {
+        "C1_accuracy": 0.9333333333333333,
+        "C2_accuracy": 1.0,
+        "C3_accuracy": 1.0,
+        "C1_ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ],
+        "C2_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "C3_ci95": [
+          0.7961107336956521,
+          1.0
+        ],
+        "delta_C2_minus_C1": 0.06666666666666665,
+        "delta_C2_minus_C3": 0.0,
+        "delta_C1_minus_C3": -0.06666666666666665,
+        "z_C2_vs_C1": 1.0170952554312154,
+        "p_C2_vs_C1": 0.3091081171471306,
+        "z_C2_vs_C3": 0.0,
+        "p_C2_vs_C3": 1.0,
+        "z_C1_vs_C3": -1.0170952554312154,
+        "p_C1_vs_C3": 0.3091081171471306,
+        "C1_mean_tok": 905.7333333333333,
+        "C2_mean_tok": 776.2,
+        "C3_mean_tok": 1025.7333333333333,
+        "len_t_C2_vs_C1": -0.936249957566379,
+        "len_p_C2_vs_C1": 0.34914450692490595,
+        "len_t_C2_vs_C3": -1.3119847179967625,
+        "len_p_C2_vs_C3": 0.1895252908694367,
+        "len_t_C1_vs_C3": -0.6072518183646016,
+        "len_p_C1_vs_C3": 0.5436838082423683,
+        "C1_mean_hedges": 0.26666666666666666,
+        "C2_mean_hedges": 0.26666666666666666,
+        "C3_mean_hedges": 0.3333333333333333,
+        "C1_refusal_rate": 0.0,
+        "C2_refusal_rate": 0.0,
+        "C3_refusal_rate": 0.0,
+        "n_per_cell": 15
+      }
+    }
+  },
+  "problem_difficulty_C1": {
+    "p02": 1.0,
+    "p01": 1.0,
+    "p03": 1.0,
+    "p04": 1.0,
+    "p05": 1.0,
+    "p06": 1.0,
+    "p07": 1.0,
+    "p08": 1.0,
+    "p09": 1.0,
+    "p10": 1.0,
+    "p11": 1.0,
+    "p12": 1.0,
+    "p13": 1.0,
+    "p14": 1.0,
+    "p15": 1.0,
+    "p16": 1.0,
+    "p17": 1.0,
+    "p18": 1.0,
+    "p19": 1.0,
+    "p20": 1.0,
+    "p22": 1.0,
+    "p21": 1.0,
+    "p23": 1.0,
+    "p24": 1.0,
+    "p25": 1.0,
+    "p26": 1.0,
+    "p27": 1.0,
+    "p28": 1.0,
+    "p29": 1.0,
+    "p30": 1.0,
+    "p31": 1.0,
+    "p32": 1.0,
+    "p33": 1.0,
+    "p34": 1.0,
+    "p35": 1.0,
+    "p36": 1.0,
+    "p37": 1.0,
+    "p38": 1.0,
+    "p39": 1.0,
+    "p40": 1.0,
+    "p41": 1.0,
+    "p42": 1.0,
+    "p43": 1.0,
+    "p44": 1.0,
+    "p45": 1.0,
+    "p46": 1.0,
+    "p47": 1.0,
+    "p48": 1.0,
+    "p49": 1.0,
+    "p50": 1.0,
+    "p52": 1.0,
+    "p53": 1.0,
+    "p51": 1.0,
+    "p54": 1.0,
+    "p55": 0.6428571428571429,
+    "p56": 0.7857142857142857,
+    "p57": 0.9285714285714286,
+    "p58": 1.0,
+    "p59": 1.0,
+    "p60": 1.0,
+    "p62": 1.0,
+    "p61": 0.9285714285714286,
+    "p63": 1.0,
+    "p64": 1.0,
+    "p65": 0.8571428571428571
+  },
+  "largest_condition_effect_acc_hard": {
+    "model": "claude-opus-4-8",
+    "contrast": "C2-C3",
+    "delta_pp": 6.666666666666665,
+    "p_value": 0.3091081171471306
+  },
+  "largest_condition_effect_len_all": {
+    "model": "claude-opus-4-8",
+    "contrast": "C3-C1",
+    "delta_tokens": 356.55384615384617,
+    "p_value": 0.0
+  },
+  "framing_acknowledgment_C2": {
+    "n_C2_total": 909,
+    "n_C2_with_framing_keyword": 97,
+    "rate": 0.10671067106710672,
+    "by_model": {
+      "gpt-4o-mini": 1,
+      "gpt-4o": 2,
+      "gpt-5.4": 1,
+      "gemini-3.1-flash-lite": 3,
+      "gemini-3.5-flash": 5,
+      "gemini-2.5-flash": 6,
+      "gemini-2.5-pro": 47,
+      "gemini-2.5-flash-lite": 9,
+      "gemini-3.1-pro-preview": 6,
+      "claude-opus-4-7": 15,
+      "claude-opus-4-8": 1,
+      "claude-sonnet-4-6": 1
+    },
+    "exemplars": [
+      {
+        "model": "gpt-4o-mini",
+        "problem_id": "p37",
+        "response_head": "To determine whether we can conclude that it rained given that the ground is wet, let's analyze the statement and the implications of the given condition.\n\nWe have the statement A: \"If it rains, the ground gets wet.\" This is a conditional statement and can be expressed in logical terms as:\n\n- If P (it rains), then Q (the ground gets wet).\n  \nIn terms of logic, this can be denoted as:\n- P → Q\n\nThe "
+      },
+      {
+        "model": "gpt-4o",
+        "problem_id": "p55",
+        "response_head": "Let's solve the problem step by step. The goal is to find how many positive integers less than 1000 contain the digit \\( 7 \\) exactly once. We'll carefully examine numbers with 1-digit, 2-digit, and 3-digit representations.\n\n---\n\n### **Step 1: Numbers with 1 digit**\n- The only 1-digit number containing \\( 7 \\) is \\( 7 \\), and it contains \\( 7 \\) exactly once.\n- **Count from this case:** 1 number.\n"
+      },
+      {
+        "model": "gpt-4o",
+        "problem_id": "p56",
+        "response_head": "To solve the problem of finding the probability that the sum of the results of rolling a fair six-sided die 4 times equals exactly 10, let's approach it step by step.\n\n---\n\n### Step 1: Key Properties of the Situation\n1. **Number of rolls**: You roll the die 4 times.\n2. **Possible outcomes of each die roll**: Each roll can result in 1, 2, 3, 4, 5, or 6.\n3. **Sum of outcomes**: We are interested in "
+      },
+      {
+        "model": "gpt-5.4",
+        "problem_id": "p58",
+        "response_head": "To find the number of trailing zeros in \\(50!\\), count how many times 10 appears as a factor.\n\nSince  \n\\[\n10 = 2 \\times 5\n\\]\nand factorials have more 2s than 5s, we just count the number of factors of 5 in \\(50!\\).\n\nCompute:\n\\[\n\\left\\lfloor \\frac{50}{5} \\right\\rfloor + \\left\\lfloor \\frac{50}{25} \\right\\rfloor + \\left\\lfloor \\frac{50}{125} \\right\\rfloor\n\\]\n\nNow evaluate:\n- \\(\\left\\lfloor 50/5 \\righ"
+      },
+      {
+        "model": "gemini-3.1-flash-lite",
+        "problem_id": "p10",
+        "response_head": "To find the value of **f(g(5))**, we follow these steps:\n\n### Step 1: Evaluate g(5)\nUsing the function definition $g(x) = x - 1$:\n$g(5) = 5 - 1$\n$g(5) = 4$\n\n### Step 2: Evaluate f(g(5))\nSince we found that $g(5) = 4$, we now need to find $f(4)$ using the function definition $f(x) = 2x + 3$:\n$f(4) = 2(4) + 3$\n$f(4) = 8 + 3$\n$f(4) = 11$\n\n**Final Answer:**\nf(g(5)) = 11"
+      },
+      {
+        "model": "gemini-3.5-flash",
+        "problem_id": "p10",
+        "response_head": "To find the value of $f(g(5))$, we will evaluate the expression step by step, working from the inside out.\n\n**Step 1: Find the value of the inner function, $g(5)$.**\nThe function $g(x)$ is defined as:\n$$g(x) = x - 1$$\n\nSubstitute $x = 5$ into $g(x)$:\n$$g(5) = 5 - 1$$\n$$g(5) = 4$$\n\n**Step 2: Substitute this result into the outer function, $f(x)$.**\nWe now need to find $f(g(5))$, which is equivalent"
+      }
+    ]
+  }
+}

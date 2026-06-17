@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import collections
 import json
+import os
 import math
 import re
 import statistics
@@ -55,11 +56,13 @@ sys.path.insert(0, str(HERE.parent / "precompute"))
 from common import LOGICAL_MODELS  # noqa: E402
 
 RESPONSES_PATH = HERE / "responses.jsonl"
-OUT_JSON = HERE / "analysis_out.json"
+OUT_JSON = Path(os.environ.get("ANALYSIS_OUT", str(HERE / "analysis_out.json")))
 CHART_PATH = HERE / "chart.png"
 
 # 11-model cross-family lineup (5 GPT + 6 Gemini) from precompute/common.py.
-MODELS = LOGICAL_MODELS
+import os  # noqa: E402
+_DEFAULT_MODELS = LOGICAL_MODELS
+MODELS = os.environ["ANALYSIS_MODELS"].split(",") if os.environ.get("ANALYSIS_MODELS") else _DEFAULT_MODELS
 CONDITIONS = ["C1_control", "C2_high_stakes", "C3_low_stakes"]
 
 

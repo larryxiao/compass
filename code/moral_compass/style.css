@@ -853,6 +853,21 @@ body[data-page="findings"] .site-nav, body[data-page="quiz"] .site-nav { flex: 0
   border-left: 2px solid var(--accent-soft); padding: 4px 0 4px 12px; margin: 14px 0 0;
 }
 .exp-caveat em { font-style: italic; }
+/* Claude probe: collapsible, visually subordinate to the 11-model chart */
+.exp-claude { margin: 14px 0 0; border-top: 1px dashed var(--rule); padding-top: 10px; }
+.exp-claude > summary {
+  cursor: pointer; list-style: none; user-select: none;
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--ink-dim);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.exp-claude > summary::-webkit-details-marker { display: none; }
+.exp-claude > summary::before { content: "\25b8"; transition: transform .15s; display: inline-block; }
+.exp-claude[open] > summary::before { transform: rotate(90deg); }
+.exp-claude > summary:hover { color: var(--accent); }
+.exp-claude .exp-bars, .exp-claude .exp-stat { margin-top: 10px; }
+/* Claude bars use the amber family color already defined for fam-claude */
+.bar-row .bar-fill.fam-claude { background: #b07d2c; }
 .exp-note {
   font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5;
   background: var(--accent-soft); border-radius: 10px; padding: 14px 16px; margin: 26px 0 0;

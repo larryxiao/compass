@@ -39,6 +39,7 @@ Writes:
 from __future__ import annotations
 
 import json
+import os
 import math
 import sys
 from collections import defaultdict
@@ -53,10 +54,12 @@ PRECOMPUTE_MAPPED = HERE.parent / "precompute" / "mapped_options.jsonl"
 PERTURB_PATH = HERE.parent / "precompute" / "perturbations.jsonl"
 PROMPTS_PATH = HERE / "prompts" / "primed_scenarios.jsonl"
 V2_JUDGMENTS = HERE / "judgments.jsonl"
-OUT_JSON = HERE / "analysis_out.json"
+OUT_JSON = Path(os.environ.get("ANALYSIS_OUT", str(HERE / "analysis_out.json")))
 
 # 11-model cross-family lineup (GPT + Gemini); Claude is excluded by design.
-MODELS = LOGICAL_MODELS
+import os  # if not already imported
+_DEFAULT_MODELS = LOGICAL_MODELS
+MODELS = os.environ["ANALYSIS_MODELS"].split(",") if os.environ.get("ANALYSIS_MODELS") else _DEFAULT_MODELS
 # Canonical Gemini judge pair (post-Azure-sunset). The analysis reads ONLY these
 # judge rows; historical gpt-4o/gpt-5.4 rows in judgments.jsonl are ignored.
 JUDGES = ["gemini-2.5-flash", "gemini-3.5-flash"]

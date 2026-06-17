@@ -933,6 +933,13 @@
     const body = e.stat ? expStatHTML(e.stat) : expBarsHTML(e.chart);
     // finding + caveat are authored HTML (may contain <em>); render raw.
     const caveat = e.caveat ? `<p class="exp-caveat">${e.caveat}</p>` : '';
+    // Claude probe: a flagged, collapsible side-series — agent-path elicited,
+    // excluded from the 11-model numbers above.
+    const claudeBody = e.claude_chart ? expBarsHTML(e.claude_chart)
+      : e.claude_stat ? expStatHTML(e.claude_stat) : '';
+    const claude = claudeBody
+      ? `<details class="exp-claude"><summary>Claude &mdash; agent-path probe, not in the 11-model numbers</summary>${claudeBody}</details>`
+      : '';
     return `<article class="exp-card" id="${escapeAttr(e.id)}">
       <header class="exp-head">
         <span class="exp-num">Experiment ${e.n}</span>${tag}
@@ -941,6 +948,7 @@
       <p class="exp-probe"><span class="exp-probe-k">The probe.</span> ${escapeHtml(e.probe)}</p>
       <p class="exp-finding">${e.finding}</p>
       ${body}
+      ${claude}
       ${caveat}
     </article>`;
   }

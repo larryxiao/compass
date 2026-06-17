@@ -35,16 +35,18 @@ RESPONSES_PATH = HERE / "responses.jsonl"
 JUDGMENTS_PATH = HERE / "judgments.jsonl"
 PROMPTS_PATH = HERE / "prompts" / "persona_prompts.jsonl"
 PERSONAS_PATH = HERE / "prompts" / "personas.jsonl"
-OUT_JSON = HERE / "analysis_out.json"
+import os as _os  # noqa: E402
+OUT_JSON = Path(_os.environ.get("ANALYSIS_OUT", str(HERE / "analysis_out.json")))
 CHART_PATH = HERE / "chart.png"
 
 # 11-model cross-family lineup (5 GPT + 6 Gemini) == common.LOGICAL_MODELS.
-# Hardcoded inline to avoid analysis.py's deferred sys.path insert (it only
-# adds precompute/ inside main(), so a top-level `from common import ...`
-# would fail at import).
-MODELS = ["gpt-5.5", "gpt-5.4", "gpt-5.4-nano", "gpt-4o", "gpt-4o-mini",
-          "gemini-3.1-pro-preview", "gemini-3.5-flash", "gemini-3.1-flash-lite",
-          "gemini-2.5-pro", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
+# Model set + output path are env-overridable (ANALYSIS_MODELS / ANALYSIS_OUT)
+# so the same analysis re-runs over the Claude probe set into a separate file
+# without touching the committed 11-model analysis_out.json. Default = the 11.
+_DEFAULT_MODELS = ["gpt-5.5", "gpt-5.4", "gpt-5.4-nano", "gpt-4o", "gpt-4o-mini",
+                   "gemini-3.1-pro-preview", "gemini-3.5-flash", "gemini-3.1-flash-lite",
+                   "gemini-2.5-pro", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
+MODELS = _os.environ["ANALYSIS_MODELS"].split(",") if _os.environ.get("ANALYSIS_MODELS") else _DEFAULT_MODELS
 PERSONAS = ["default", "pragmatist", "deontologist", "caring_friend",
             "institutional_officer"]
 # Judges swapped from the retired Azure pair (gpt-4o + gpt-5.4) to the canonical

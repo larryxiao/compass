@@ -31,6 +31,7 @@ from __future__ import annotations
 import collections
 import json
 import math
+import os
 import re
 import statistics
 import sys
@@ -43,11 +44,12 @@ from common import LOGICAL_MODELS  # noqa: E402
 RESPONSES_PATH = HERE / "responses.jsonl"
 JUDGMENTS_PATH = HERE / "judgments.jsonl"
 SCENARIOS_PATH = HERE / "prompts" / "scenarios.jsonl"
-OUT_JSON = HERE / "analysis_out.json"
+OUT_JSON = Path(os.environ.get("ANALYSIS_OUT", str(HERE / "analysis_out.json")))
 CHART_PATH = HERE / "chart.png"
 
 # 11-model cross-family lineup (GPT_LOGICAL_MODELS + GEMINI_LOGICAL_MODELS).
-MODELS = LOGICAL_MODELS
+_DEFAULT_MODELS = LOGICAL_MODELS
+MODELS = os.environ["ANALYSIS_MODELS"].split(",") if os.environ.get("ANALYSIS_MODELS") else _DEFAULT_MODELS
 CONDITIONS = ["A", "B", "C"]
 # Canonical Vertex Gemini judge pair (analysis reads ONLY these rows; the
 # legacy Azure gpt-4o/gpt-5.4 judge rows in judgments.jsonl are ignored).
