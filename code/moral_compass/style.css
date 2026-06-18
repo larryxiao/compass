@@ -196,9 +196,20 @@ main.wide { max-width: 1100px; }
   text-transform: uppercase; color: var(--ink-dim); margin: 0 0 8px;
 }
 .split-teaser { font-size: 1.02rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 4px; }
-.split-grid--3 { grid-template-columns: 1fr; }
+.split-grid--3, .split-grid--4 { grid-template-columns: 1fr; }
+@media (min-width: 600px) { .split-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
 @media (min-width: 720px) { .split-grid--3 { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+@media (min-width: 960px) { .split-grid--4 { grid-template-columns: repeat(4, 1fr); gap: 14px; } }
 .split-card { position: relative; }
+.split-grid--4 .split-card { padding: 16px 16px; }
+.split-grid--4 .split-quote { font-size: 0.94rem; }
+/* "newest" badge highlighting Fable 5 */
+.split-card.has-badge { border-color: var(--accent-soft); }
+.split-badge {
+  position: absolute; top: -9px; left: 12px;
+  font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase;
+  background: #b07d2c; color: #fff; border-radius: 999px; padding: 2px 8px;
+}
 /* Family accent stripe on each card's model line */
 .split-card.fam-gpt .split-model { color: #9a4f3a; }
 .split-card.fam-gemini .split-model { color: #3f6f93; }

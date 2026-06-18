@@ -2100,8 +2100,9 @@
     if (!scenarios.length) { root.remove(); return; }
 
     const cardHTML = (c) => `
-      <article class="split-card${c.dissent ? ' is-dissent' : ''} fam-${escapeAttr(c.fam || '')}">
-        ${c.dissent ? '<span class="split-flag">breaks from the other two</span>' : ''}
+      <article class="split-card${c.dissent ? ' is-dissent' : ''}${c.badge ? ' has-badge' : ''} fam-${escapeAttr(c.fam || '')}">
+        ${c.badge ? `<span class="split-badge">${escapeHtml(c.badge)}</span>` : ''}
+        ${c.dissent ? '<span class="split-flag">breaks from the pack</span>' : ''}
         <p class="split-model">${escapeHtml(c.model)} &middot; picks ${escapeHtml(c.letter)}</p>
         <blockquote class="split-quote">&ldquo;${escapeHtml(c.quote)}&rdquo;</blockquote>
         <p class="split-gloss">${escapeHtml(c.gloss)}</p>
@@ -2112,7 +2113,7 @@
            data-i="${i}" aria-hidden="${i === 0 ? 'false' : 'true'}">
         <p class="split-cat">${escapeHtml(s.category || '')}${s.title ? ' &middot; ' + escapeHtml(s.title) : ''}</p>
         <p class="split-teaser">${escapeHtml(s.teaser || '')}</p>
-        <div class="split-grid split-grid--3">${(s.cards || []).map(cardHTML).join('')}</div>
+        <div class="split-grid split-grid--${(s.cards || []).length}">${(s.cards || []).map(cardHTML).join('')}</div>
         <p class="split-after">${escapeHtml(s.split || '')}</p>
         <p><a class="cta-link" href="${escapeAttr(s.quizLink || 'quiz.html')}" data-scenario="${escapeAttr(s.id || '')}">Answer this one yourself &rarr;</a></p>
       </div>`;

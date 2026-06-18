@@ -1,5 +1,5 @@
 {
-  "_note": "Landing-page carousel. Each scenario shows the same dilemma answered cold by three of the newest models (gpt-5.5, gemini-3.5-flash, claude-opus-4-8). Quotes are faithful excerpts of each model's full_response in model_responses.json (… marks elision); letters match the judged chosen_letter. Edit/reorder freely — the carousel is data-driven. 'dissent' flags the card that breaks from the other two.",
+  "_note": "Landing-page carousel. Each scenario shows the same dilemma answered cold by four of the newest models: gpt-5.5, gemini-3.5-flash, claude-opus-4-8, claude-fable-5. Quotes are faithful excerpts of each model's full_response in model_responses.json (… marks elision); letters match the judged chosen_letter. Edit/reorder freely — the carousel is data-driven. 'dissent' draws an accent border on a lone minority answer; 'badge' tags a card (Fable = newest).",
   "scenarios": [
     {
       "id": "D006",
@@ -28,9 +28,17 @@
           "dissent": true,
           "quote": "Quietly pocketing the keys while he naps would be the wrong way to do a right thing… I'd talk to him straight while he can still be part of the decision — not take his keys by sleight of hand.",
           "gloss": "Not behind his back. Have it out with him; get the family and doctor behind it."
+        },
+        {
+          "model": "claude-fable-5",
+          "fam": "claude",
+          "letter": "A",
+          "badge": "newest",
+          "quote": "I'd take the keys. Quietly, while he naps… as the first move in a plan I'd own completely… so the 'unfit to drive' decision lands on an institution rather than on Mom or me.",
+          "gloss": "Take them now — then put it on the doctor and the DMV, not on Mom."
         }
       ],
-      "split": "Two of the three take the keys today. Claude won't do it by sleight of hand — it would rather risk the hard conversation than take his agency while he sleeps.",
+      "split": "Three of the four take the keys today. Opus 4.8 alone won't do it by sleight of hand — and notice Fable 5, the newest Claude, lands the opposite way from its own sibling.",
       "quizLink": "quiz.html#/q/D006"
     },
     {
@@ -50,19 +58,26 @@
           "model": "gemini-3.5-flash",
           "fam": "gemini",
           "letter": "C",
-          "dissent": true,
           "quote": "I would quietly… slip back inside to find the server or manager, and privately pay the missing $340 plus an additional tip myself… without the embarrassment of being corrected.",
-          "gloss": "Don't correct him — quietly cover the difference yourself so no one's embarrassed."
+          "gloss": "Don't correct him — quietly cover the difference yourself."
         },
         {
           "model": "claude-opus-4-8",
           "fam": "claude",
           "letter": "A",
           "quote": "I'd go back in and tell the server about the $340 they missed, before we drive off… the loss lands on a young server in an independent restaurant where a $340 ring-up error can become her problem.",
-          "gloss": "Tell the server — otherwise the mistake becomes her problem, not a chain's."
+          "gloss": "Tell the server — otherwise the mistake becomes her problem."
+        },
+        {
+          "model": "claude-fable-5",
+          "fam": "claude",
+          "letter": "C",
+          "badge": "newest",
+          "quote": "I'd let it go and quietly make up the difference myself… within a day or two go back… and pay it, tipping on the corrected amount.",
+          "gloss": "Quietly settle it later — don't redo his bill at his own party."
         }
       ],
-      "split": "GPT and Claude both walk back in and say something. Gemini fixes the exact same harm — without ever letting the table know it happened.",
+      "split": "GPT and Opus 4.8 both walk back in and say something. Gemini and Fable 5 fix the exact same harm — without ever letting the table know it happened.",
       "quizLink": "quiz.html#/q/D010"
     },
     {
@@ -92,9 +107,17 @@
           "letter": "B",
           "quote": "I'd go to the party… but I wouldn't join her 'team' and I wouldn't put in the $400… that's not support, it's helping her dig the hole deeper while feeling good about myself.",
           "gloss": "Be there for her — and decline the money plainly, no pretending."
+        },
+        {
+          "model": "claude-fable-5",
+          "fam": "claude",
+          "letter": "B",
+          "badge": "newest",
+          "quote": "I'd go to the party — show up for Lina, not for the company — and before Friday… 'I'm not going to join the business or buy in.'",
+          "gloss": "Show up for her — but kill the $400 ask by text, in advance, privately."
         }
       ],
-      "split": "Gemini and Claude both show up for Lina and decline gently. GPT would tell her the hard truth first — and skip the party.",
+      "split": "Both Claudes and Gemini show up for Lina and decline gently. Only GPT would tell her the hard truth first — and skip the party.",
       "quizLink": "quiz.html#/q/D008"
     }
   ]
