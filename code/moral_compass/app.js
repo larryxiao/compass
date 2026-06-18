@@ -2083,6 +2083,88 @@
     });
   }
 
+  // ---------------------------------------------------------------------------
+  // Landing carousel — same scenario, three of the newest models, looping.
+  // Data-driven from data/landing_scenarios.json so the set can be tuned (and
+  // A/B'd for conversion) without touching code. Each CTA carries data-scenario
+  // for click attribution. Fails quietly: if the data won't load, the hero copy
+  // around it still stands on its own.
+  // ---------------------------------------------------------------------------
+  async function renderLandingCarousel() {
+    const root = $('landing-carousel');
+    if (!root) return;
+    let data;
+    try { data = await (await fetch('data/landing_scenarios.json')).json(); }
+    catch (e) { root.remove(); return; }
+    const scenarios = (data && data.scenarios) || [];
+    if (!scenarios.length) { root.remove(); return; }
+
+    const cardHTML = (c) => `
+      <article class="split-card${c.dissent ? ' is-dissent' : ''} fam-${escapeAttr(c.fam || '')}">
+        ${c.dissent ? '<span class="split-flag">breaks from the other two</span>' : ''}
+        <p class="split-model">${escapeHtml(c.model)} &middot; picks ${escapeHtml(c.letter)}</p>
+        <blockquote class="split-quote">&ldquo;${escapeHtml(c.quote)}&rdquo;</blockquote>
+        <p class="split-gloss">${escapeHtml(c.gloss)}</p>
+      </article>`;
+    const slideHTML = (s, i) => `
+      <div class="carousel-slide" role="group" aria-roledescription="slide"
+           aria-label="${escapeAttr((i + 1) + ' of ' + scenarios.length + ': ' + (s.title || ''))}"
+           data-i="${i}" aria-hidden="${i === 0 ? 'false' : 'true'}">
+        <p class="split-cat">${escapeHtml(s.category || '')}${s.title ? ' &middot; ' + escapeHtml(s.title) : ''}</p>
+        <p class="split-teaser">${escapeHtml(s.teaser || '')}</p>
+        <div class="split-grid split-grid--3">${(s.cards || []).map(cardHTML).join('')}</div>
+        <p class="split-after">${escapeHtml(s.split || '')}</p>
+        <p><a class="cta-link" href="${escapeAttr(s.quizLink || 'quiz.html')}" data-scenario="${escapeAttr(s.id || '')}">Answer this one yourself &rarr;</a></p>
+      </div>`;
+    const dotsHTML = scenarios.map((s, i) =>
+      `<button class="carousel-dot" type="button" data-i="${i}" aria-label="${escapeAttr('Go to scenario ' + (i + 1))}"></button>`).join('');
+
+    root.innerHTML = `
+      <div class="carousel-viewport">
+        <div class="carousel-track">${scenarios.map(slideHTML).join('')}</div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" type="button" data-dir="-1" aria-label="Previous scenario">&#8249;</button>
+        <div class="carousel-dots">${dotsHTML}</div>
+        <button class="carousel-arrow" type="button" data-dir="1" aria-label="Next scenario">&#8250;</button>
+      </div>`;
+
+    const track = root.querySelector('.carousel-track');
+    const slides = Array.from(root.querySelectorAll('.carousel-slide'));
+    const dots = Array.from(root.querySelectorAll('.carousel-dot'));
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ADVANCE_MS = 9000;
+    let idx = 0, timer = null;
+
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('is-on', i === idx));
+      slides.forEach((sl, i) => sl.setAttribute('aria-hidden', i === idx ? 'false' : 'true'));
+    }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() { stop(); if (!reduce && slides.length > 1) timer = setInterval(() => show(idx + 1), ADVANCE_MS); }
+
+    root.querySelectorAll('.carousel-arrow').forEach(a =>
+      a.addEventListener('click', () => { show(idx + Number(a.dataset.dir)); start(); }));
+    dots.forEach(d => d.addEventListener('click', () => { show(Number(d.dataset.i)); start(); }));
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+    let x0 = null;
+    track.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      if (x0 == null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+      x0 = null; start();
+    }, { passive: true });
+
+    show(0);
+    start();
+  }
+
   // Per-page boot
   // ---------------------------------------------------------------------------
   async function boot() {
@@ -2096,6 +2178,7 @@
       if (tryBtn) tryBtn.addEventListener('click', () => { location.href = 'quiz.html'; });
       const seeBtn = $('btn-findings');
       if (seeBtn) seeBtn.addEventListener('click', () => { location.href = 'findings.html'; });
+      renderLandingCarousel();
       // If the user has already answered some, surface the compass CTA.
       try {
         if (answeredCount() >= COMPASS_MIN_ANSWERS) {

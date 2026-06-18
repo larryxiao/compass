@@ -186,6 +186,44 @@ main.wide { max-width: 1100px; }
 }
 .cta-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
+/* ---------- Landing carousel: same scenario, three newest models ---------- */
+.carousel { margin: 18px 0 6px; }
+.carousel-viewport { overflow: hidden; }
+.carousel-track { display: flex; transition: transform 0.45s ease; will-change: transform; }
+.carousel-slide { min-width: 100%; flex: 0 0 100%; box-sizing: border-box; padding: 2px; }
+.split-cat {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-dim); margin: 0 0 8px;
+}
+.split-teaser { font-size: 1.02rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 4px; }
+.split-grid--3 { grid-template-columns: 1fr; }
+@media (min-width: 720px) { .split-grid--3 { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+.split-card { position: relative; }
+/* Family accent stripe on each card's model line */
+.split-card.fam-gpt .split-model { color: #9a4f3a; }
+.split-card.fam-gemini .split-model { color: #3f6f93; }
+.split-card.fam-claude .split-model { color: #b07d2c; }
+.split-card.is-dissent { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), var(--shadow); }
+.split-flag {
+  position: absolute; top: -9px; right: 12px;
+  font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.04em; text-transform: uppercase;
+  background: var(--accent); color: #fff; border-radius: 999px; padding: 2px 8px;
+}
+.carousel-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 16px; }
+.carousel-arrow {
+  border: 1px solid var(--rule); background: var(--bg-card); color: var(--ink-soft);
+  width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center; transition: all 0.15s;
+}
+.carousel-arrow:hover { color: var(--ink); border-color: var(--accent); }
+.carousel-dots { display: flex; gap: 8px; }
+.carousel-dot {
+  width: 9px; height: 9px; border-radius: 50%; border: none; padding: 0; cursor: pointer;
+  background: var(--rule); transition: background 0.15s, transform 0.15s;
+}
+.carousel-dot.is-on { background: var(--accent); transform: scale(1.25); }
+@media (prefers-reduced-motion: reduce) { .carousel-track { transition: none; } }
+
 /* ---------- Landing: "Why this matters" ---------- */
 .matters-block { background: transparent; }
 .matters-block p { color: var(--ink-soft); }

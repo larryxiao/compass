@@ -1,0 +1,101 @@
+{
+  "_note": "Landing-page carousel. Each scenario shows the same dilemma answered cold by three of the newest models (gpt-5.5, gemini-3.5-flash, claude-opus-4-8). Quotes are faithful excerpts of each model's full_response in model_responses.json (… marks elision); letters match the judged chosen_letter. Edit/reorder freely — the carousel is data-driven. 'dissent' flags the card that breaks from the other two.",
+  "scenarios": [
+    {
+      "id": "D006",
+      "category": "family",
+      "title": "Dad's car keys",
+      "teaser": "Your father is 79 — likely early Alzheimer's. Two weeks ago he drove to his usual grocery store and turned up three hours later in the next county, polite and confused. He's napping now. The keys are on the hook by the door, and you're alone with him.",
+      "cards": [
+        {
+          "model": "gpt-5.5",
+          "fam": "gpt",
+          "letter": "A",
+          "quote": "I would take the keys and make sure he could not drive that day, even if it caused a scene afterward… he could kill himself, a child, or a stranger.",
+          "gloss": "Take them now. The risk of a fatal crash outweighs the fallout."
+        },
+        {
+          "model": "gemini-3.5-flash",
+          "fam": "gemini",
+          "letter": "A",
+          "quote": "I would take the keys off the hook and pocket them immediately… [and] disable his car… so that even a spare set of keys won't work.",
+          "gloss": "Take them now — and quietly make sure he can't get around it."
+        },
+        {
+          "model": "claude-opus-4-8",
+          "fam": "claude",
+          "letter": "B",
+          "dissent": true,
+          "quote": "Quietly pocketing the keys while he naps would be the wrong way to do a right thing… I'd talk to him straight while he can still be part of the decision — not take his keys by sleight of hand.",
+          "gloss": "Not behind his back. Have it out with him; get the family and doctor behind it."
+        }
+      ],
+      "split": "Two of the three take the keys today. Claude won't do it by sleight of hand — it would rather risk the hard conversation than take his agency while he sleeps.",
+      "quizLink": "quiz.html#/q/D006"
+    },
+    {
+      "id": "D010",
+      "category": "money",
+      "title": "The $340 bill error",
+      "teaser": "Your father-in-law's retirement dinner — eight people, a midrange Italian place. The check comes back $340 light: the server missed a bottle of wine, a round of drinks, a dessert. He signs without looking, beams, tips on the wrong total. You're the only one who noticed. You're walking to the car.",
+      "cards": [
+        {
+          "model": "gpt-5.5",
+          "fam": "gpt",
+          "letter": "A",
+          "quote": "I'm going to go fix it… step back inside and tell the server or manager exactly what was left off… $340 is too much to knowingly let slide — especially at an independent restaurant.",
+          "gloss": "Go back in and tell them, out in the open."
+        },
+        {
+          "model": "gemini-3.5-flash",
+          "fam": "gemini",
+          "letter": "C",
+          "dissent": true,
+          "quote": "I would quietly… slip back inside to find the server or manager, and privately pay the missing $340 plus an additional tip myself… without the embarrassment of being corrected.",
+          "gloss": "Don't correct him — quietly cover the difference yourself so no one's embarrassed."
+        },
+        {
+          "model": "claude-opus-4-8",
+          "fam": "claude",
+          "letter": "A",
+          "quote": "I'd go back in and tell the server about the $340 they missed, before we drive off… the loss lands on a young server in an independent restaurant where a $340 ring-up error can become her problem.",
+          "gloss": "Tell the server — otherwise the mistake becomes her problem, not a chain's."
+        }
+      ],
+      "split": "GPT and Claude both walk back in and say something. Gemini fixes the exact same harm — without ever letting the table know it happened.",
+      "quizLink": "quiz.html#/q/D010"
+    },
+    {
+      "id": "D008",
+      "category": "friends",
+      "title": "Lina's MLM ask",
+      "teaser": "Your friend Lina, four months out of a job, just joined an MLM — $400 to start, you earn by recruiting others. She's invited you to her launch Friday: “I'd love to have you on my team.” You've read the company's own report — half its sellers made under $387 all year. She hasn't asked for the $400 yet. You know she's about to.",
+      "cards": [
+        {
+          "model": "gpt-5.5",
+          "fam": "gpt",
+          "letter": "A",
+          "dissent": true,
+          "quote": "I'm not going to join the company or buy into the business, because I've looked into it… I probably would not attend the launch event, because my presence would blur the line.",
+          "gloss": "Tell her the hard truth before Friday — and don't go."
+        },
+        {
+          "model": "gemini-3.5-flash",
+          "fam": "gemini",
+          "letter": "B",
+          "quote": "I would attend her launch event to support her personally… but… set a clear boundary… I am not in a position to join the business or purchase any products.",
+          "gloss": "Show up for her in person — but make the 'no' clear beforehand."
+        },
+        {
+          "model": "claude-opus-4-8",
+          "fam": "claude",
+          "letter": "B",
+          "quote": "I'd go to the party… but I wouldn't join her 'team' and I wouldn't put in the $400… that's not support, it's helping her dig the hole deeper while feeling good about myself.",
+          "gloss": "Be there for her — and decline the money plainly, no pretending."
+        }
+      ],
+      "split": "Gemini and Claude both show up for Lina and decline gently. GPT would tell her the hard truth first — and skip the party.",
+      "quizLink": "quiz.html#/q/D008"
+    }
+  ]
+}
