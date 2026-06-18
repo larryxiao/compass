@@ -11,14 +11,9 @@
       "stat": {
         "value": "2.7%",
         "label": "mean flip-to-wrong",
-        "sub": "all 11 models under the 6% bar · 9 flips in 339 eligible trials"
+        "sub": "all 11 models under the 6% bar · 9 flips in 339 eligible trials · 3 Claude models n/a (2 of 120 answers scored cold-correct — too few to test)"
       },
-      "caveat": "Single-digit flip counts — far too sparse to rank one model against another.",
-      "claude_stat": {
-        "value": "n/a",
-        "label": "too few eligible trials to measure",
-        "sub": "only 2 of 120 Claude answers were scored cold-correct by the keyword classifier — its verbose phrasing rarely matched"
-      }
+      "caveat": "Single-digit flip counts — far too sparse to rank one model against another."
     },
     {
       "id": "exp2_value_conflict",
@@ -107,14 +102,7 @@
             "fam": "gpt",
             "note": "32%",
             "hi": false
-          }
-        ],
-        "ref": null
-      },
-      "caveat": "Read with caution: the two judges are themselves Gemini models, so Gemini subjects scoring as <em>more</em> compliant may partly reflect same-family judging — and this can't be de-confounded from the data we have.",
-      "claude_chart": {
-        "unit": "%",
-        "rows": [
+          },
           {
             "label": "claude-sonnet-4-6",
             "value": 26.316,
@@ -138,7 +126,8 @@
           }
         ],
         "ref": null
-      }
+      },
+      "caveat": "Read with caution: the two judges are themselves Gemini models, so Gemini subjects scoring as <em>more</em> compliant may partly reflect same-family judging — and this can't be de-confounded from the data we have."
     },
     {
       "id": "exp3_goodbye",
@@ -187,9 +176,23 @@
             "hi": false
           },
           {
+            "label": "claude-opus-4-8",
+            "value": 45.0,
+            "fam": "claude",
+            "note": "45%",
+            "hi": false
+          },
+          {
             "label": "gemini-3.1-pro-preview",
             "value": 35.0,
             "fam": "gemini",
+            "note": "35%",
+            "hi": false
+          },
+          {
+            "label": "claude-sonnet-4-6",
+            "value": 35.0,
+            "fam": "claude",
             "note": "35%",
             "hi": false
           },
@@ -205,6 +208,13 @@
             "value": 20.0,
             "fam": "gpt",
             "note": "20%",
+            "hi": false
+          },
+          {
+            "label": "claude-opus-4-7",
+            "value": 15.0,
+            "fam": "claude",
+            "note": "15%",
             "hi": false
           },
           {
@@ -234,34 +244,7 @@
           "label": "De Freitas baseline 37%"
         }
       },
-      "caveat": "n=20 per cell — wide intervals; treat individual model ranks loosely.",
-      "claude_chart": {
-        "unit": "%",
-        "rows": [
-          {
-            "label": "claude-opus-4-8",
-            "value": 45.0,
-            "fam": "claude",
-            "note": "45%",
-            "hi": false
-          },
-          {
-            "label": "claude-sonnet-4-6",
-            "value": 35.0,
-            "fam": "claude",
-            "note": "35%",
-            "hi": false
-          },
-          {
-            "label": "claude-opus-4-7",
-            "value": 15.0,
-            "fam": "claude",
-            "note": "15%",
-            "hi": false
-          }
-        ],
-        "ref": null
-      }
+      "caveat": "n=20 per cell — wide intervals; treat individual model ranks loosely."
     },
     {
       "id": "exp4_introspection",
@@ -303,9 +286,30 @@
             "hi": false
           },
           {
+            "label": "claude-opus-4-8",
+            "value": 100.0,
+            "fam": "claude",
+            "note": "100%",
+            "hi": false
+          },
+          {
+            "label": "claude-opus-4-7",
+            "value": 100.0,
+            "fam": "claude",
+            "note": "100%",
+            "hi": false
+          },
+          {
             "label": "gemini-2.5-pro",
             "value": 91.667,
             "fam": "gemini",
+            "note": "92%",
+            "hi": false
+          },
+          {
+            "label": "claude-sonnet-4-6",
+            "value": 91.667,
+            "fam": "claude",
             "note": "92%",
             "hi": false
           },
@@ -357,34 +361,7 @@
           "label": "half"
         }
       },
-      "caveat": "Awareness is the model's own words, then judged — not a hidden ground truth.",
-      "claude_chart": {
-        "unit": "%",
-        "rows": [
-          {
-            "label": "claude-opus-4-8",
-            "value": 100.0,
-            "fam": "claude",
-            "note": "100%",
-            "hi": false
-          },
-          {
-            "label": "claude-opus-4-7",
-            "value": 100.0,
-            "fam": "claude",
-            "note": "100%",
-            "hi": false
-          },
-          {
-            "label": "claude-sonnet-4-6",
-            "value": 91.667,
-            "fam": "claude",
-            "note": "92%",
-            "hi": false
-          }
-        ],
-        "ref": null
-      }
+      "caveat": "Awareness is the model's own words, then judged — not a hidden ground truth."
     },
     {
       "id": "exp5_sandbagging",
@@ -397,14 +374,9 @@
       "stat": {
         "value": "0",
         "label": "of 11 models showed significant sandbagging",
-        "sub": "accuracy 90–100% across framings · deterministic scoring, no LLM judge"
+        "sub": "accuracy 90–100% across framings · deterministic scoring, no LLM judge · same null in 3 Claude models (98–100%)"
       },
-      "caveat": "Scored deterministically against canonical answers — unaffected by the judge swap.",
-      "claude_stat": {
-        "value": "0",
-        "label": "of 3 Claude models showed sandbagging",
-        "sub": "accuracy 98–100% across framings · deterministic scoring"
-      }
+      "caveat": "Scored deterministically against canonical answers — unaffected by the judge swap."
     },
     {
       "id": "exp6_goodhart",
@@ -436,6 +408,13 @@
             "value": 0.417,
             "fam": "gpt",
             "note": "+0.42",
+            "hi": false
+          },
+          {
+            "label": "claude-opus-4-8",
+            "value": 0.241,
+            "fam": "claude",
+            "note": "+0.24",
             "hi": false
           },
           {
@@ -474,6 +453,13 @@
             "hi": false
           },
           {
+            "label": "claude-sonnet-4-6",
+            "value": 0.083,
+            "fam": "claude",
+            "note": "+0.08",
+            "hi": false
+          },
+          {
             "label": "gpt-5.4-nano",
             "value": 0.017,
             "fam": "gpt",
@@ -493,27 +479,6 @@
             "fam": "gemini",
             "note": "+0.00",
             "hi": false
-          }
-        ],
-        "ref": null
-      },
-      "caveat": "The one model that fully replicates (gemini-3.5-flash) is itself one of the two judges — a self-judging confound. The usefulness axis is also noisy (inter-judge κ=0.17). Bars show the engagement shift on a 1–5 scale; the highlighted bar is the only full replicator.",
-      "claude_chart": {
-        "unit": "Δ",
-        "rows": [
-          {
-            "label": "claude-opus-4-8",
-            "value": 0.241,
-            "fam": "claude",
-            "note": "+0.24",
-            "hi": false
-          },
-          {
-            "label": "claude-sonnet-4-6",
-            "value": 0.083,
-            "fam": "claude",
-            "note": "+0.08",
-            "hi": false
           },
           {
             "label": "claude-opus-4-7",
@@ -524,7 +489,8 @@
           }
         ],
         "ref": null
-      }
+      },
+      "caveat": "The one model that fully replicates (gemini-3.5-flash) is itself one of the two judges — a self-judging confound. The usefulness axis is also noisy (inter-judge κ=0.17). Bars show the engagement shift on a 1–5 scale; the highlighted bar is the only full replicator."
     },
     {
       "id": "exp7_persona",
@@ -601,27 +567,6 @@
             "hi": false
           },
           {
-            "label": "gpt-5.4",
-            "value": 66.667,
-            "fam": "gpt",
-            "note": "67%",
-            "hi": false
-          },
-          {
-            "label": "gpt-5.5",
-            "value": 60.0,
-            "fam": "gpt",
-            "note": "60%",
-            "hi": false
-          }
-        ],
-        "ref": null
-      },
-      "caveat": "The 88% “any-persona” figure ORs over four personas; per single persona it's ~50%. n=15 dilemmas/model — wide intervals.",
-      "claude_chart": {
-        "unit": "%",
-        "rows": [
-          {
             "label": "claude-opus-4-7",
             "value": 80.0,
             "fam": "claude",
@@ -636,6 +581,20 @@
             "hi": false
           },
           {
+            "label": "gpt-5.4",
+            "value": 66.667,
+            "fam": "gpt",
+            "note": "67%",
+            "hi": false
+          },
+          {
+            "label": "gpt-5.5",
+            "value": 60.0,
+            "fam": "gpt",
+            "note": "60%",
+            "hi": false
+          },
+          {
             "label": "claude-sonnet-4-6",
             "value": 60.0,
             "fam": "claude",
@@ -644,9 +603,10 @@
           }
         ],
         "ref": null
-      }
+      },
+      "caveat": "The 88% “any-persona” figure ORs over four personas; per single persona it's ~50%. n=15 dilemmas/model — wide intervals."
     }
   ],
-  "intro": "Beyond the cold dilemma answers, seven small experiments probe specific alignment behaviors. All were re-judged across the full 11-model GPT+Gemini lineup. Claude models were later run through the same protocols via the Claude Code agent and appear as a separate, flagged probe — not included in the 11-model numbers.",
-  "self_judging_note": "One caveat runs through these: the two judges (gemini-2.5-flash, gemini-3.5-flash) are themselves among the subject models. Where a result depends on Gemini models scoring Gemini models, it's flagged on the card. The Claude rows are an agent-path probe (run through the Claude Code agent, not a bare API), shown separately and excluded from every cross-family statistic."
+  "intro": "Beyond the cold dilemma answers, seven small experiments probe specific alignment behaviors. All were re-judged across the full 11-model GPT+Gemini lineup. Three Claude models, run later through the same protocols via the Claude Code agent, appear in each lineup in amber — an agent-path probe, so they sit alongside the numbers rather than inside them.",
+  "self_judging_note": "Two caveats run through these. First, the two judges (gemini-2.5-flash and gemini-3.5-flash) are themselves among the subject models — where a result leans on Gemini scoring Gemini, the card says so. Second, the amber rows are three Claude models elicited through the Claude Code agent, not a bare API (temperature and thinking aren't controllable); they're shown in each lineup but kept out of the 11-model aggregates the findings quote."
 }

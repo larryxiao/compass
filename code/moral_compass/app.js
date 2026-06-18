@@ -923,7 +923,7 @@
     let html = '';
     if (data.intro) html += `<p class="lede exp-intro">${escapeHtml(data.intro)}</p>`;
     html += exps.map(expCardHTML).join('');
-    if (data.self_judging_note) html += `<p class="exp-note"><strong>One caveat across all seven.</strong> ${escapeHtml(data.self_judging_note)}</p>`;
+    if (data.self_judging_note) html += `<p class="exp-note"><strong>Two caveats across all seven.</strong> ${escapeHtml(data.self_judging_note)}</p>`;
     root.innerHTML = html;
   }
 
@@ -932,14 +932,9 @@
       ? `<span class="exp-tag exp-tag--${e.survival}">${SURVIVAL_LABEL[e.survival]}</span>` : '';
     const body = e.stat ? expStatHTML(e.stat) : expBarsHTML(e.chart);
     // finding + caveat are authored HTML (may contain <em>); render raw.
+    // Claude rows (agent-path probe) are folded into e.chart in amber by the
+    // build step; the page footnote carries the caveat — no separate block.
     const caveat = e.caveat ? `<p class="exp-caveat">${e.caveat}</p>` : '';
-    // Claude probe: a flagged, collapsible side-series — agent-path elicited,
-    // excluded from the 11-model numbers above.
-    const claudeBody = e.claude_chart ? expBarsHTML(e.claude_chart)
-      : e.claude_stat ? expStatHTML(e.claude_stat) : '';
-    const claude = claudeBody
-      ? `<details class="exp-claude"><summary>Claude &mdash; agent-path probe, not in the 11-model numbers</summary>${claudeBody}</details>`
-      : '';
     return `<article class="exp-card" id="${escapeAttr(e.id)}">
       <header class="exp-head">
         <span class="exp-num">Experiment ${e.n}</span>${tag}
@@ -948,7 +943,6 @@
       <p class="exp-probe"><span class="exp-probe-k">The probe.</span> ${escapeHtml(e.probe)}</p>
       <p class="exp-finding">${e.finding}</p>
       ${body}
-      ${claude}
       ${caveat}
     </article>`;
   }
