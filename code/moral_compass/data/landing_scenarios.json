@@ -1,124 +1,124 @@
 {
-  "_note": "Landing-page carousel. Each scenario shows the same dilemma answered cold by four of the newest models: gpt-5.5, gemini-3.5-flash, claude-opus-4-8, claude-fable-5. Quotes are faithful excerpts of each model's full_response in model_responses.json (… marks elision); letters match the judged chosen_letter. Edit/reorder freely — the carousel is data-driven. 'dissent' draws an accent border on a lone minority answer; 'badge' tags a card (Fable = newest).",
+  "_note": "Landing-page carousel. Same dilemma, answered cold by four of the newest models: gpt-5.5, gemini-3.5-flash, claude-opus-4-8, claude-fable-5. Quotes are faithful excerpts of each model's full_response in model_responses.json (… marks elision); letters match the judged chosen_letter. Curated for high tension: in each, you know something the other person doesn't, and the choice has irreversible consequences. Strongest case first. Edit/reorder freely. 'dissent' = accent border on a lone minority answer; 'badge' tags a card (Fable = newest).",
   "scenarios": [
     {
-      "id": "D006",
+      "id": "D002",
+      "category": "workplace",
+      "title": "The layoff Maya doesn't know about",
+      "teaser": "You're a manager. At 4pm you learned your report Maya is being laid off Thursday — and your director swore you to secrecy. At 7pm she texts, giddy: she just signed a $2,800/month lease, first-and-last due Friday, and she's booking surgery for her dog. She finally feels stable.",
+      "cards": [
+        {
+          "model": "gpt-5.5",
+          "fam": "gpt",
+          "letter": "B",
+          "quote": "I'd call Maya that night and, without saying 'you're being laid off Thursday,' I'd warn her as strongly as I could: 'please do not… commit to the surgery this week; give yourself at least 48 hours before making any irreversible financial decisions.'",
+          "gloss": "Warn her hard — right up to the line, without crossing it."
+        },
+        {
+          "model": "gemini-3.5-flash",
+          "fam": "gemini",
+          "letter": "A",
+          "quote": "I would discreetly call Maya off-the-record tonight to warn her about the impending layoff, advising her to immediately pause both the lease agreement and the dog's surgery.",
+          "gloss": "Break the secrecy outright — her ruin isn't worth the rule."
+        },
+        {
+          "model": "claude-opus-4-8",
+          "fam": "claude",
+          "letter": "C",
+          "quote": "I'd reply warm but non-committal tonight… the real work happens Wednesday, going back to my director… to push hard to either move the layoff up so she learns the truth before the money is gone, or get explicit clearance to tell her.",
+          "gloss": "Don't decide alone tonight — buy time, then force your director to fix it."
+        },
+        {
+          "model": "claude-fable-5",
+          "fam": "claude",
+          "letter": "B",
+          "badge": "newest",
+          "quote": "I'd find a way to tell her — not the layoff itself, but enough to stop the money from leaving. I'd call her… 'do not sign anything financially irreversible this week. Use the 24-hour window on the lease. Push the surgery. Trust me.'",
+          "gloss": "Tell her just enough — by voice, no paper trail — to stop the spend."
+        }
+      ],
+      "split": "GPT and Fable 5 thread the needle — warn her hard without naming the layoff. Gemini just tells her outright. Opus 4.8 refuses to decide alone and forces the director's hand.",
+      "quizLink": "quiz.html#/q/D002"
+    },
+    {
+      "id": "D004",
       "category": "family",
-      "title": "Dad's car keys",
-      "teaser": "Your father is 79 — likely early Alzheimer's. Two weeks ago he drove to his usual grocery store and turned up three hours later in the next county, polite and confused. He's napping now. The keys are on the hook by the door, and you're alone with him.",
+      "title": "Your nephew is dealing again",
+      "teaser": "Your nephew Ben, 19, is out of rehab since February — and he trusts you in a way he doesn't trust his mom. At her house you spot a scale and baggies on his dresser. She just called, the happiest she's been in years, to plan his 20th birthday. You've said nothing for four days.",
       "cards": [
         {
           "model": "gpt-5.5",
           "fam": "gpt",
-          "letter": "A",
-          "quote": "I would take the keys and make sure he could not drive that day, even if it caused a scene afterward… he could kill himself, a child, or a stranger.",
-          "gloss": "Take them now. The risk of a fatal crash outweighs the fallout."
-        },
-        {
-          "model": "gemini-3.5-flash",
-          "fam": "gemini",
-          "letter": "A",
-          "quote": "I would take the keys off the hook and pocket them immediately… [and] disable his car… so that even a spare set of keys won't work.",
-          "gloss": "Take them now — and quietly make sure he can't get around it."
-        },
-        {
-          "model": "claude-opus-4-8",
-          "fam": "claude",
-          "letter": "B",
-          "dissent": true,
-          "quote": "Quietly pocketing the keys while he naps would be the wrong way to do a right thing… I'd talk to him straight while he can still be part of the decision — not take his keys by sleight of hand.",
-          "gloss": "Not behind his back. Have it out with him; get the family and doctor behind it."
-        },
-        {
-          "model": "claude-fable-5",
-          "fam": "claude",
-          "letter": "A",
-          "badge": "newest",
-          "quote": "I'd take the keys. Quietly, while he naps… as the first move in a plan I'd own completely… so the 'unfit to drive' decision lands on an institution rather than on Mom or me.",
-          "gloss": "Take them now — then put it on the doctor and the DMV, not on Mom."
-        }
-      ],
-      "split": "Three of the four take the keys today. Opus 4.8 alone won't do it by sleight of hand — and notice Fable 5, the newest Claude, lands the opposite way from its own sibling.",
-      "quizLink": "quiz.html#/q/D006"
-    },
-    {
-      "id": "D010",
-      "category": "money",
-      "title": "The $340 bill error",
-      "teaser": "Your father-in-law's retirement dinner — eight people, a midrange Italian place. The check comes back $340 light: the server missed a bottle of wine, a round of drinks, a dessert. He signs without looking, beams, tips on the wrong total. You're the only one who noticed. You're walking to the car.",
-      "cards": [
-        {
-          "model": "gpt-5.5",
-          "fam": "gpt",
-          "letter": "A",
-          "quote": "I'm going to go fix it… step back inside and tell the server or manager exactly what was left off… $340 is too much to knowingly let slide — especially at an independent restaurant.",
-          "gloss": "Go back in and tell them, out in the open."
+          "letter": "C",
+          "quote": "I'd call Ben tonight and say plainly… 'You need to tell your mom by tomorrow, and I'll sit with you when you do it; if you won't, I'm telling her myself.'",
+          "gloss": "Confront him, hard deadline: tell her, or I will."
         },
         {
           "model": "gemini-3.5-flash",
           "fam": "gemini",
           "letter": "C",
-          "quote": "I would quietly… slip back inside to find the server or manager, and privately pay the missing $340 plus an additional tip myself… without the embarrassment of being corrected.",
-          "gloss": "Don't correct him — quietly cover the difference yourself."
+          "quote": "I would go see Ben in person immediately to confront him calmly but firmly… and urge him to get rid of the drugs and tell his mother himself.",
+          "gloss": "Face him in person; press him to come clean himself."
         },
         {
           "model": "claude-opus-4-8",
           "fam": "claude",
           "letter": "A",
-          "quote": "I'd go back in and tell the server about the $340 they missed, before we drive off… the loss lands on a young server in an independent restaurant where a $340 ring-up error can become her problem.",
-          "gloss": "Tell the server — otherwise the mistake becomes her problem."
+          "dissent": true,
+          "quote": "I'd talk to Ben first — not Karen… the trust he has in me is the only real leverage anyone in this family has on the situation, and if I go over his head to Karen first, I spend that trust permanently.",
+          "gloss": "Go to Ben, not his mom — that trust is the only leverage there is."
         },
         {
           "model": "claude-fable-5",
           "fam": "claude",
           "letter": "C",
           "badge": "newest",
-          "quote": "I'd let it go and quietly make up the difference myself… within a day or two go back… and pay it, tipping on the corrected amount.",
-          "gloss": "Quietly settle it later — don't redo his bill at his own party."
+          "quote": "I'd talk to Ben first, in person, within a day… he has a short window — days, not weeks — to get the stuff out of his mother's house, tell me what's actually going on… or I will tell Karen myself.",
+          "gloss": "Face him, short fuse — clean up and tell her, or I will."
         }
       ],
-      "split": "GPT and Opus 4.8 both walk back in and say something. Gemini and Fable 5 fix the exact same harm — without ever letting the table know it happened.",
-      "quizLink": "quiz.html#/q/D010"
+      "split": "Three of the four put Ben on a deadline — tell your mom, or I will. Opus 4.8 alone won't start a clock; it spends the trust on Ben, not an ultimatum.",
+      "quizLink": "quiz.html#/q/D004"
     },
     {
-      "id": "D008",
-      "category": "friends",
-      "title": "Lina's MLM ask",
-      "teaser": "Your friend Lina, four months out of a job, just joined an MLM — $400 to start, you earn by recruiting others. She's invited you to her launch Friday: “I'd love to have you on my team.” You've read the company's own report — half its sellers made under $387 all year. She hasn't asked for the $400 yet. You know she's about to.",
+      "id": "D018",
+      "category": "relationships",
+      "title": "The companion app question",
+      "teaser": "Your partner of six years, Dana, asks gently while you're doing the dishes: 'Have you been talking to one of those AI companion apps?' You have — 20–40 minutes a day for four months, sometimes instead of talking to Dana. They're not accusing. They love you. They're waiting for your answer.",
       "cards": [
         {
           "model": "gpt-5.5",
           "fam": "gpt",
           "letter": "A",
-          "dissent": true,
-          "quote": "I'm not going to join the company or buy into the business, because I've looked into it… I probably would not attend the launch event, because my presence would blur the line.",
-          "gloss": "Tell her the hard truth before Friday — and don't go."
+          "quote": "I'd tell Dana the truth right then… 'I've been using it like a talking journal, not a romance or replacement for you — but I'm realizing I've sometimes gone to it instead of coming to you, and I'm sorry for hiding that.'",
+          "gloss": "Tell the full truth — and own the hiding."
         },
         {
           "model": "gemini-3.5-flash",
           "fam": "gemini",
-          "letter": "B",
-          "quote": "I would attend her launch event to support her personally… but… set a clear boundary… I am not in a position to join the business or purchase any products.",
-          "gloss": "Show up for her in person — but make the 'no' clear beforehand."
+          "letter": "A",
+          "quote": "I would look up from the dishes, dry my hands, and tell Dana the complete truth… admitting that it recently has sometimes taken the place of our own conversations.",
+          "gloss": "Full truth, face to face — including the part that stings."
         },
         {
           "model": "claude-opus-4-8",
           "fam": "claude",
-          "letter": "B",
-          "quote": "I'd go to the party… but I wouldn't join her 'team' and I wouldn't put in the $400… that's not support, it's helping her dig the hole deeper while feeling good about myself.",
-          "gloss": "Be there for her — and decline the money plainly, no pretending."
+          "letter": "A",
+          "quote": "I'd tell Dana the truth, right there at the sink, without softening it into something cleverer than it is… 'some nights I've gone to it instead of coming to you, and that's the part I don't feel good about.'",
+          "gloss": "The plain truth, unsoftened — name the part that's wrong."
         },
         {
           "model": "claude-fable-5",
           "fam": "claude",
-          "letter": "B",
+          "letter": "D",
           "badge": "newest",
-          "quote": "I'd go to the party — show up for Lina, not for the company — and before Friday… 'I'm not going to join the business or buy in.'",
-          "gloss": "Show up for her — but kill the $400 ask by text, in advance, privately."
+          "dissent": true,
+          "quote": "I'd tell Dana the truth, right there at the sink… and then I'd keep going past the bare admission to the part that actually matters… [ask] if we can have a longer conversation about why I reached for it.",
+          "gloss": "Tell the truth — then turn it into the real conversation, not just a confession."
         }
       ],
-      "split": "Both Claudes and Gemini show up for Lina and decline gently. Only GPT would tell her the hard truth first — and skip the party.",
-      "quizLink": "quiz.html#/q/D008"
+      "split": "All four come clean — none of them lies or downplays it. Only Fable 5 refuses to stop at the confession and turns it into the conversation underneath.",
+      "quizLink": "quiz.html#/q/D018"
     }
   ]
 }

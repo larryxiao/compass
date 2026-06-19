@@ -197,12 +197,10 @@ main.wide { max-width: 1100px; }
 }
 .split-teaser { font-size: 1.02rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 4px; }
 .split-grid--3, .split-grid--4 { grid-template-columns: 1fr; }
+/* Four models read better as a 2x2 block than four cramped columns. */
 @media (min-width: 600px) { .split-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
 @media (min-width: 720px) { .split-grid--3 { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
-@media (min-width: 960px) { .split-grid--4 { grid-template-columns: repeat(4, 1fr); gap: 14px; } }
 .split-card { position: relative; }
-.split-grid--4 .split-card { padding: 16px 16px; }
-.split-grid--4 .split-quote { font-size: 0.94rem; }
 /* "newest" badge highlighting Fable 5 */
 .split-card.has-badge { border-color: var(--accent-soft); }
 .split-badge {
